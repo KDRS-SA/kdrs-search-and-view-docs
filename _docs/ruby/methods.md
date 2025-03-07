@@ -65,21 +65,25 @@ table customers will be updated with the new data
 
 ### Render another table than @docs
 {: .no_toc}
-Use view index and table index if you want to render another table than @docs \
-You can also send data into the docs variable.
+If you want to render another table than @docs, you can send the data to the render 'table' method \
+Or you could update the default @docs variable as needed.
 {% highlight erb %}
-  <%= render 'table', vi:1, ti:2, primarykey:"personid" %>
+  <%= render 'table', docs: movies %>
 {% endhighlight %}
+- `docs` optional data to be rendered
+- `title` optional table title
+- `fields` fields to show. By default the @show_fields variable will be used.
+
+### Adding parameters to the table URL
+{: .no_toc}
+Sometimes the next view may need extra data from the previous view. We can add those to the link by sending them into the render table method. Any parameter except of docs will be added to the url.
+
 - `vi` view index
 - `ti` table index
 - `primarykey` comma separated list of primarykeys
-- `docs` optional parameter with data to be rendered
 
 `NOTE` If you reorder the xml, you must update the view and table index
 
-### Adding extra parameters
-{: .no_toc}
-Sometimes the next view may need extra data from the previous view. We can add those to the link by sending them into the render table method. Any parameter except of docs will be added to the url.
 
 E.g. here we send info about which view was the previous one, in "from_table". The name of the variable is your choice.
 
