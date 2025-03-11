@@ -15,7 +15,7 @@ Sorting will be done after the edits.
         ...
         <edit>[0..2]</edit> <!-- extracts country code +47 from +4790011111  -->
         <edit>date.in_time_zone</edit> <!-- converts to local time zone  -->
-        <edit>date.in_time_zone.strftime("%m.%d.%Y")</edit> <!-- converts to local time zone, and returns string in norwegian date format -->
+        <edit>date.in_time_zone.strftime("%d.%m.%Y")</edit> <!-- converts to local time zone, and returns string in norwegian date format -->
         <edit>semester.gsub("s1","semester 1")</edit> <!-- semester 1 instead of s1 -->
         <edit>grade.gsub(/^.{0}$/,"---")</edit> <!-- If no grade, draw a line -->
         <edit>timer.gsub(".0","")</edit> <!-- e.g. 5 instead of 5.0  -->
