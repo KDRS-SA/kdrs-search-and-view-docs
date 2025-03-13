@@ -974,14 +974,14 @@
   },"139": {
     "doc": "edit",
     "title": "Example",
-    "content": "&lt;table&gt; ... &lt;edit&gt;[0..2]&lt;/edit&gt; &lt;!-- extracts country code +47 from +4790011111 --&gt; &lt;edit&gt;date.in_time_zone&lt;/edit&gt; &lt;!-- converts to local time zone --&gt; &lt;edit&gt;date.in_time_zone.strftime(\"%d.%m.%Y\")&lt;/edit&gt; &lt;!-- converts to local time zone, and returns string in norwegian date format --&gt; &lt;edit&gt;semester.gsub(\"s1\",\"semester 1\")&lt;/edit&gt; &lt;!-- semester 1 instead of s1 --&gt; &lt;edit&gt;grade.gsub(/^.{0}$/,\"---\")&lt;/edit&gt; &lt;!-- If no grade, draw a line --&gt; &lt;edit&gt;timer.gsub(\".0\",\"\")&lt;/edit&gt; &lt;!-- e.g. 5 instead of 5.0 --&gt; &lt;edit&gt;location.capitalize&lt;/edit&gt; &lt;!-- Trondheim is a city in norway --&gt; &lt;edit&gt;location.titleize&lt;/edit&gt; &lt;!-- Trondheim Is A City In Norway --&gt; &lt;edit&gt;location.downcase&lt;/edit&gt; &lt;!-- trondheim is a city in norway --&gt; &lt;edit&gt;location.upcase&lt;/edit&gt; &lt;!-- TRONDHEIM IS A CITY IN NORWAY --&gt; . Each table and field can have multiple edits, as shown above. Searching on edited fields will currently search in the original data. ",
+    "content": "&lt;table&gt; ... &lt;edit&gt;[0..2]&lt;/edit&gt; &lt;!-- extracts country code +47 from +4790011111 --&gt; &lt;edit&gt;date.in_time_zone&lt;/edit&gt; &lt;!-- converts to local time zone --&gt; &lt;edit&gt;date.in_time_zone.strftime(\"%d.%m.%Y\")&lt;/edit&gt; &lt;!-- converts to local time zone, and returns string in norwegian date format --&gt; &lt;edit&gt;semester.sub(\"s1\",\"semester 1\")&lt;/edit&gt; &lt;!-- semester 1 instead of s1 --&gt; &lt;edit&gt;grade.sub(/^.{0}$/,\"---\")&lt;/edit&gt; &lt;!-- If no grade, draw a line --&gt; &lt;edit&gt;timer.sub(\".0\",\"\")&lt;/edit&gt; &lt;!-- e.g. 5 instead of 5.0 --&gt; &lt;edit&gt;location.capitalize&lt;/edit&gt; &lt;!-- Trondheim is a city in norway --&gt; &lt;edit&gt;location.titleize&lt;/edit&gt; &lt;!-- Trondheim Is A City In Norway --&gt; &lt;edit&gt;location.downcase&lt;/edit&gt; &lt;!-- trondheim is a city in norway --&gt; &lt;edit&gt;location.upcase&lt;/edit&gt; &lt;!-- TRONDHEIM IS A CITY IN NORWAY --&gt; . Note Searching on edited fields will currently search in the original data. ",
     "url": "/version/1.6/xml/edit/#example",
     
     "relUrl": "/xml/edit/#example"
   },"140": {
     "doc": "edit",
     "title": "edit",
-    "content": "Field values can be edited by using this tag. Any Ruby function can be used, as long as its on the format field.method or field[0..3]. Multiple methods can be chained, e.g. field.method1.method2 etc. The edits will be done in the final table, after all the lookups (joins). Sorting will be done after the edits. ",
+    "content": "Field values can be edited by using this tag. If the field is renamed, use the new name Any Ruby method can be used, as long as its on the format field.method or field[0..3]. Multiple methods can be chained, e.g. field.method1.method2 etc. A field can have multiple edit tags The edits will be done in the final table, after all the lookups (joins). Sorting will be done after the edits. ",
     "url": "/version/1.6/xml/edit/",
     
     "relUrl": "/xml/edit/"
@@ -1184,7 +1184,7 @@
   },"169": {
     "doc": "sort",
     "title": "sort",
-    "content": "Sort the current page based on the given column. Use the tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. You can sort on one or more columns, either in ascending or descending order. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; &lt;sort&gt;lastname desc&lt;/sort&gt; &lt;!-- sorts in descending order --&gt; &lt;sort&gt;date desc, lastname&lt;/sort&gt; &lt;!-- sorts by date first in descending order, and then by last name when dates are equal --&gt; . ",
+    "content": "Sort the current page based on the given column. Use the &lt;rows&gt; tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. You can sort on one or more columns, either in ascending or descending order. Note If the field is renamed, use the new name. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; &lt;sort&gt;lastname desc&lt;/sort&gt; &lt;!-- sorts in descending order --&gt; &lt;sort&gt;date desc, lastname&lt;/sort&gt; &lt;!-- sorts by date first in descending order, and then by last name when dates are equal --&gt; . ",
     "url": "/version/1.6/xml/sort/",
     
     "relUrl": "/xml/sort/"
