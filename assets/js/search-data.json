@@ -560,663 +560,670 @@
     "relUrl": "/ruby/debug/#attach-to-the-container"
   },"80": {
     "doc": "debug",
+    "title": "Using byebug",
+    "content": "Once the byebug line in your code is hit, the code will stop executing and you will enter the byebug terminal. In the image below you can see we run 3 commands: . | @show_fields to print the value of this variable | n or next to run the next line of code | @show_fields again to see that the value has changed | . You can also run any Ruby code you want, which can be useful to test that something works the way you expect it to: . Some useful commands in byebug: . | c or continue - Continue running the code until next time a byebug statement is hit | n or next - Run the next line of code | s or step - Steps inside a method that is on the next line to be ran, unlike next which will just run the whole method. | help - To get a list of all byebug commands | . ",
+    "url": "/ruby/debug/#using-byebug",
+    
+    "relUrl": "/ruby/debug/#using-byebug"
+  },"81": {
+    "doc": "debug",
     "title": "Quit the container",
     "content": "You need to press this key combination to exit the container, if not it will stop. press ctrl-p, ctrl-q . ",
     "url": "/ruby/debug/#quit-the-container",
     
     "relUrl": "/ruby/debug/#quit-the-container"
-  },"81": {
+  },"82": {
     "doc": "debug",
     "title": "If the container stops",
     "content": "If you exit the container by pressing ctrl-c instead of the recommended way, it will stop. In that case: . $ docker start sv-app . ",
     "url": "/ruby/debug/#if-the-container-stops",
     
     "relUrl": "/ruby/debug/#if-the-container-stops"
-  },"82": {
+  },"83": {
     "doc": "debug",
     "title": "debug",
     "content": " ",
     "url": "/ruby/debug/",
     
     "relUrl": "/ruby/debug/"
-  },"83": {
+  },"84": {
     "doc": "examples",
     "title": "Examples",
     "content": "These are som frequently used code snippets for the ruby view. ",
     "url": "/ruby/examples/#examples",
     
     "relUrl": "/ruby/examples/#examples"
-  },"84": {
+  },"85": {
     "doc": "examples",
     "title": "Table of Contents",
     "content": ". | Examples . | Display the main table | Add a new column for full name | Provide an alternative value | Use first part of the string | Convert utc to local time | Convert utc to formatted local time | Using only the date part | Custom method | Show blank page if no data | . | . ",
     "url": "/ruby/examples/#table-of-contents",
     
     "relUrl": "/ruby/examples/#table-of-contents"
-  },"85": {
+  },"86": {
     "doc": "examples",
     "title": "Display the main table",
     "content": "&lt;%= render 'table' %&gt; . | Will write the content of variable @docs that come from xml | . ",
     "url": "/ruby/examples/#display-the-main-table",
     
     "relUrl": "/ruby/examples/#display-the-main-table"
-  },"86": {
+  },"87": {
     "doc": "examples",
     "title": "Add a new column for full name",
     "content": "Make a new column that combines first name and last name . @docs.each do |doc| doc[\"full name\"] = doc[\"first name\"] + \" \" + doc[\"last name\"] end @show_fields &lt;&lt; \"full name\" . ",
     "url": "/ruby/examples/#add-a-new-column-for-full-name",
     
     "relUrl": "/ruby/examples/#add-a-new-column-for-full-name"
-  },"87": {
+  },"88": {
     "doc": "examples",
     "title": "Provide an alternative value",
     "content": "Show the student grade if it exists, or show a dashed line if its missing . @docs.each do |doc| doc[\"grade\"] ||= \"-----\" end . ",
     "url": "/ruby/examples/#provide-an-alternative-value",
     
     "relUrl": "/ruby/examples/#provide-an-alternative-value"
-  },"88": {
+  },"89": {
     "doc": "examples",
     "title": "Use first part of the string",
     "content": "E.g. remove time from the string 12.02.2024 11:00 . @docs.each do |doc| doc[\"date\"] = doc[\"date\"][0..9] end . ",
     "url": "/ruby/examples/#use-first-part-of-the-string",
     
     "relUrl": "/ruby/examples/#use-first-part-of-the-string"
-  },"89": {
+  },"90": {
     "doc": "examples",
     "title": "Convert utc to local time",
     "content": "@docs.each do |doc| doc[\"date\"] = doc[\"date\"].in_time_zone end . Note The date will be presented a little different. See next example for formatting. ",
     "url": "/ruby/examples/#convert-utc-to-local-time",
     
     "relUrl": "/ruby/examples/#convert-utc-to-local-time"
-  },"90": {
+  },"91": {
     "doc": "examples",
     "title": "Convert utc to formatted local time",
     "content": "If you want to format the result at the same time . @docs.each do |doc| doc[\"date\"] = doc[\"date\"].in_time_zone.strftime(\"%d.%m.%Y %H:%M\") end . ",
     "url": "/ruby/examples/#convert-utc-to-formatted-local-time",
     
     "relUrl": "/ruby/examples/#convert-utc-to-formatted-local-time"
-  },"91": {
+  },"92": {
     "doc": "examples",
     "title": "Using only the date part",
     "content": "Sometimes we only want the date and not the time part . @docs.each do |doc| doc[\"rental_days\"] = (doc[\"return_date\"].to_date - doc[\"rental_date\"].to_date).to_i end . Note If needed, use in_time_zone.to_date . ",
     "url": "/ruby/examples/#using-only-the-date-part",
     
     "relUrl": "/ruby/examples/#using-only-the-date-part"
-  },"92": {
+  },"93": {
     "doc": "examples",
     "title": "Custom method",
     "content": "Write out numbers e.g. 3 as “3 tre”, D as “Deltatt” Returns original string if not found . def write_out_grade(str) map = { \"1\" =&gt; \"1 en\", \"2\" =&gt; \"2 to\", \"3\" =&gt; \"3 tre\", \"4\" =&gt; \"4 fire\", \"5\" =&gt; \"5 fem\", \"6\" =&gt; \"6 seks\", \"D\" =&gt; \"Deltatt\", \"G\" =&gt; \"God\", \"NG\" =&gt; \"Nokså god\", \"LG\" =&gt; \"Lite god\", \"FU\" =&gt; \"Fullført utdanning\", \"IM\" =&gt; \"Ikke møtt\" } map[str] || str end . ",
     "url": "/ruby/examples/#custom-method",
     
     "relUrl": "/ruby/examples/#custom-method"
-  },"93": {
+  },"94": {
     "doc": "examples",
     "title": "Show blank page if no data",
     "content": "When no data, its good to exit early to avoid errors. return if @docs.empty? . ",
     "url": "/ruby/examples/#show-blank-page-if-no-data",
     
     "relUrl": "/ruby/examples/#show-blank-page-if-no-data"
-  },"94": {
+  },"95": {
     "doc": "examples",
     "title": "examples",
     "content": " ",
     "url": "/ruby/examples/",
     
     "relUrl": "/ruby/examples/"
-  },"95": {
+  },"96": {
     "doc": "logs",
     "title": "Logs",
     "content": "When making a Ruby View, it is sometimes good to have access to logs. $ docker logs -f sv-app . ",
     "url": "/ruby/logs/#logs",
     
     "relUrl": "/ruby/logs/#logs"
-  },"96": {
+  },"97": {
     "doc": "logs",
     "title": "logs",
     "content": " ",
     "url": "/ruby/logs/",
     
     "relUrl": "/ruby/logs/"
-  },"97": {
+  },"98": {
     "doc": "methods",
     "title": "Methods",
     "content": "These are the available methods for use in Ruby Views. ",
     "url": "/ruby/methods/#methods",
     
     "relUrl": "/ruby/methods/#methods"
-  },"98": {
+  },"99": {
     "doc": "methods",
     "title": "Table of Contents",
     "content": ". | Get data | Lookup data | Render table | . ",
     "url": "/ruby/methods/#table-of-contents",
     
     "relUrl": "/ruby/methods/#table-of-contents"
-  },"99": {
+  },"100": {
     "doc": "methods",
     "title": "Get data",
     "content": "Example: Get active customers . customers = table(\"customers\", active:true, fields:\"name, email\") . Method . table(table, criteria, fields:, filter:, rows:) . | table table name | criteria Add criteria as needed e.g.: school:”fro”, class:”3a”, year:”2001” . | if conflict with built in parameters, wrap them in one pair of curly braces {} as parameter 2 | . | fields comma separated string of fields to retrive, e.g. fields:”first_name, last_name” | filter optional filter with solr syntax. same as tag “filter” | rows default is 20 rows. Increase to improve sorting, or download more files at once. Set ‘MAX_ROWS’ if needed, but check performance when using large values. | Returns empty array [] if no hits | . ",
     "url": "/ruby/methods/#get-data",
     
     "relUrl": "/ruby/methods/#get-data"
-  },"100": {
+  },"101": {
     "doc": "methods",
     "title": "Lookup data",
     "content": "Lookup data in another table. This is similar to using the tag “lookup” in xml . Example: Lookup address_id to find the city . lookup(main:customers, foreignkey:\"address_id\", table:\"address\", primarykey:\"id\", fields:\"city\") . table customers will be updated with the new data . Method . lookup(main:, foreignkey, primarykey:, fields:, table:) . | main existing variable that you want to extend with more data | foreignkey the foreign key in the main document | primarykey the primary key in the lookup table | table the lookup table that has more info | . ",
     "url": "/ruby/methods/#lookup-data",
     
     "relUrl": "/ruby/methods/#lookup-data"
-  },"101": {
+  },"102": {
     "doc": "methods",
     "title": "Render table",
     "content": "Render the default @docs variable to screen . &lt;%= render 'table' %&gt; . Render another table than @docs . If you want to render another table than @docs, you can send the data to the render ‘table’ method Or you could update the default @docs variable as needed. &lt;%= render 'table', docs: movies %&gt; . | docs optional data to be rendered | title optional table title | fields fields to show. By default the @show_fields variable will be used. | . Adding parameters to the table URL . Sometimes the next view may need extra data from the previous view. We can add those to the link by sending them into the render table method. Any parameter except of docs will be added to the url. | vi view index | ti table index | primarykey comma separated list of primarykeys | . NOTE If you reorder the xml, you must update the view and table index . E.g. here we send info about which view was the previous one, in “from_table”. The name of the variable is your choice. &lt;%= render 'table', vi:1, ti:2, primarykey:\"personid\", from_table:\"report\" %&gt; . The next view can check this param . &lt;% if params[\"from_table\"] == \"report\" %&gt; . ",
     "url": "/ruby/methods/#render-table",
     
     "relUrl": "/ruby/methods/#render-table"
-  },"102": {
+  },"103": {
     "doc": "methods",
     "title": "methods",
     "content": " ",
     "url": "/ruby/methods/",
     
     "relUrl": "/ruby/methods/"
-  },"103": {
+  },"104": {
     "doc": "styling",
     "title": "Styling",
     "content": "How to make your templates look pretty . ",
     "url": "/ruby/styling/#styling",
     
     "relUrl": "/ruby/styling/#styling"
-  },"104": {
+  },"105": {
     "doc": "styling",
     "title": "Table of Contents",
     "content": ". | Styling . | CSS Styling with Bootstrap | Octicons | Charts | Markdown | . | . ",
     "url": "/ruby/styling/#table-of-contents",
     
     "relUrl": "/ruby/styling/#table-of-contents"
-  },"105": {
+  },"106": {
     "doc": "styling",
     "title": "CSS Styling with Bootstrap",
     "content": "Bootstrap makes modern css styling available in templates. Example: Formatting a table . &lt;table class=\"table\"&gt; . Example: Formatting a small table . &lt;table class=\"table table-sm\"&gt; . See Bootstrap docs for other examples . ",
     "url": "/ruby/styling/#css-styling-with-bootstrap",
     
     "relUrl": "/ruby/styling/#css-styling-with-bootstrap"
-  },"106": {
+  },"107": {
     "doc": "styling",
     "title": "Octicons",
     "content": "Octicons make icons available in templates. These are the same icons that Github uses. Example: Make an archive icon . &lt;%= octicon(\"archive\") %&gt; . Example: Make a larger icon . &lt;%= octicon(\"archive\", height:30) %&gt; . Example: Make the icon gray . &lt;%= octicon(\"archive\", fill:\"gray\") %&gt; . Note Bootstrap can also show icons, but so far we like the simplicity of Octicons. ",
     "url": "/ruby/styling/#octicons",
     
     "relUrl": "/ruby/styling/#octicons"
-  },"107": {
+  },"108": {
     "doc": "styling",
     "title": "Charts",
     "content": "With Chartkick you can use 1 line of Ruby to draw charts. ",
     "url": "/ruby/styling/#charts",
     
     "relUrl": "/ruby/styling/#charts"
-  },"108": {
+  },"109": {
     "doc": "styling",
     "title": "Markdown",
     "content": "You can write your archive description in Markdown # Heading 1 ## Heading 2 ### Heading 3 . The user will see a new info icon if the archive description is more than one line . Its is also possible to render markdown content in a Ruby View . &lt;%= markdown &lt;variable&gt; %&gt; . ",
     "url": "/ruby/styling/#markdown",
     
     "relUrl": "/ruby/styling/#markdown"
-  },"109": {
+  },"110": {
     "doc": "styling",
     "title": "styling",
     "content": " ",
     "url": "/ruby/styling/",
     
     "relUrl": "/ruby/styling/"
-  },"110": {
+  },"111": {
     "doc": "variables",
     "title": "Variables",
     "content": "These are the available variables . ",
     "url": "/ruby/variables/#variables",
     
     "relUrl": "/ruby/variables/#variables"
-  },"111": {
+  },"112": {
     "doc": "variables",
     "title": "@docs",
     "content": "Hash containing the data from XML . Display the main table . &lt;%= render 'table' %&gt; . Change all rows in a table . @docs.each do |doc| doc[\"first name\"] = doc[\"first name\"].titleize end . ",
     "url": "/ruby/variables/#docs",
     
     "relUrl": "/ruby/variables/#docs"
-  },"112": {
+  },"113": {
     "doc": "variables",
     "title": "@show_fields",
     "content": "Array of fields to present from the @docs variable . Add field . @show_fields += [\"first name\", \"last name\"] . Quick add field . @show_fields &lt;&lt; \"address\" . Remove field . @show_fields -= [\"first name\", \"last name\"] . Redefine order . Normally we define order in the fields tag when getting data, but we can also change order here . @show_fields = [\"first name\", \"last name\"] . ",
     "url": "/ruby/variables/#show_fields",
     
     "relUrl": "/ruby/variables/#show_fields"
-  },"113": {
+  },"114": {
     "doc": "variables",
     "title": "params",
     "content": "The primary key and search parameters from the parent will be put in the hash called params. Then the child view can use these values to fetch more data if needed, or do lookups. params[\"person_id\"] . ",
     "url": "/ruby/variables/#params",
     
     "relUrl": "/ruby/variables/#params"
-  },"114": {
+  },"115": {
     "doc": "variables",
     "title": "variables",
     "content": " ",
     "url": "/ruby/variables/",
     
     "relUrl": "/ruby/variables/"
-  },"115": {
+  },"116": {
     "doc": "Templates",
     "title": "Available Templates",
     "content": "Making new templates is an ongoing work by KDRS and our members. There can be templates available that are not on this list. To make your own template - see Guides . ",
     "url": "/templates/#available-templates",
     
     "relUrl": "/templates/#available-templates"
-  },"116": {
+  },"117": {
     "doc": "Templates",
     "title": "Table of Contents",
     "content": ". | Extens skole | iSkole (kommer) | Kontor 2000 (pågår) | Otto | Sakila | Sats Skole | System X 🆕 | Tieto Gerica 🆕 | VIGO Voksen 🆕 | Visma BVPro | Visma Familia 🆕 | Visma Marthe 🆕 | Visma Oskar 🆕 | Visma PPI | Visma Velferd (pågår) | Vitec HK data - oppvekst 🆕 | Vitec Plania (pågår) | WIS Skole | Other | . ",
     "url": "/templates/#table-of-contents",
     
     "relUrl": "/templates/#table-of-contents"
-  },"117": {
+  },"118": {
     "doc": "Templates",
     "title": "Extens skole",
     "content": "Vendor: IST . ",
     "url": "/templates/#extens-skole",
     
     "relUrl": "/templates/#extens-skole"
-  },"118": {
+  },"119": {
     "doc": "Templates",
     "title": "iSkole (kommer)",
     "content": " ",
     "url": "/templates/#iskole-kommer",
     
     "relUrl": "/templates/#iskole-kommer"
-  },"119": {
+  },"120": {
     "doc": "Templates",
     "title": "Kontor 2000 (pågår)",
     "content": "Vendor: Sikri Previous vendor: Evry . ",
     "url": "/templates/#kontor-2000-p%C3%A5g%C3%A5r",
     
     "relUrl": "/templates/#kontor-2000-pågår"
-  },"120": {
+  },"121": {
     "doc": "Templates",
     "title": "Otto",
     "content": "Vendor: IST . ",
     "url": "/templates/#otto",
     
     "relUrl": "/templates/#otto"
-  },"121": {
+  },"122": {
     "doc": "Templates",
     "title": "Sakila",
     "content": "Vendor: Oracle MySQL Movie database for tutorial purposes . ",
     "url": "/templates/#sakila",
     
     "relUrl": "/templates/#sakila"
-  },"122": {
+  },"123": {
     "doc": "Templates",
     "title": "Sats Skole",
     "content": "Vendor: IST . ",
     "url": "/templates/#sats-skole",
     
     "relUrl": "/templates/#sats-skole"
-  },"123": {
+  },"124": {
     "doc": "Templates",
     "title": "System X 🆕",
     "content": "Vendor: Hove Medical Systems AS . ",
     "url": "/templates/#system-x-",
     
     "relUrl": "/templates/#system-x-"
-  },"124": {
+  },"125": {
     "doc": "Templates",
     "title": "Tieto Gerica 🆕",
     "content": "Vendor: Tietoevry Care . ",
     "url": "/templates/#tieto-gerica-",
     
     "relUrl": "/templates/#tieto-gerica-"
-  },"125": {
+  },"126": {
     "doc": "Templates",
     "title": "VIGO Voksen 🆕",
     "content": "Previous name: Realdok . ",
     "url": "/templates/#vigo-voksen-",
     
     "relUrl": "/templates/#vigo-voksen-"
-  },"126": {
+  },"127": {
     "doc": "Templates",
     "title": "Visma BVPro",
     "content": "Previous vendor: Hiadata . ",
     "url": "/templates/#visma-bvpro",
     
     "relUrl": "/templates/#visma-bvpro"
-  },"127": {
+  },"128": {
     "doc": "Templates",
     "title": "Visma Familia 🆕",
     "content": "Vendor: Visma . ",
     "url": "/templates/#visma-familia-",
     
     "relUrl": "/templates/#visma-familia-"
-  },"128": {
+  },"129": {
     "doc": "Templates",
     "title": "Visma Marthe 🆕",
     "content": "Vendor: Visma . ",
     "url": "/templates/#visma-marthe-",
     
     "relUrl": "/templates/#visma-marthe-"
-  },"129": {
+  },"130": {
     "doc": "Templates",
     "title": "Visma Oskar 🆕",
     "content": "Vendor: Visma Previous Vendor: Unique . ",
     "url": "/templates/#visma-oskar-",
     
     "relUrl": "/templates/#visma-oskar-"
-  },"130": {
+  },"131": {
     "doc": "Templates",
     "title": "Visma PPI",
     "content": "Vendor: Visma Previous Vendor: Unique . ",
     "url": "/templates/#visma-ppi",
     
     "relUrl": "/templates/#visma-ppi"
-  },"131": {
+  },"132": {
     "doc": "Templates",
     "title": "Visma Velferd (pågår)",
     "content": "Vendor: Visma . ",
     "url": "/templates/#visma-velferd-p%C3%A5g%C3%A5r",
     
     "relUrl": "/templates/#visma-velferd-pågår"
-  },"132": {
+  },"133": {
     "doc": "Templates",
     "title": "Vitec HK data - oppvekst 🆕",
     "content": "Et skreddersydd fagsystem for å ivareta PP-tjenestens behov . ",
     "url": "/templates/#vitec-hk-data---oppvekst-",
     
     "relUrl": "/templates/#vitec-hk-data---oppvekst-"
-  },"133": {
+  },"134": {
     "doc": "Templates",
     "title": "Vitec Plania (pågår)",
     "content": "Eiendomsadministrasjon . ",
     "url": "/templates/#vitec-plania-p%C3%A5g%C3%A5r",
     
     "relUrl": "/templates/#vitec-plania-pågår"
-  },"134": {
+  },"135": {
     "doc": "Templates",
     "title": "WIS Skole",
     "content": "Vendor: Waade Information System . ",
     "url": "/templates/#wis-skole",
     
     "relUrl": "/templates/#wis-skole"
-  },"135": {
+  },"136": {
     "doc": "Templates",
     "title": "Other",
     "content": "KDRS can help configure a template as part of your membership. We also arrange courses to get you up to speed. To make your own template - see Guides Not a member? Any other questions? Please contact help@kdrs.no . ",
     "url": "/templates/#other",
     
     "relUrl": "/templates/#other"
-  },"136": {
+  },"137": {
     "doc": "Templates",
     "title": "Templates",
     "content": " ",
     "url": "/templates/",
     
     "relUrl": "/templates/"
-  },"137": {
+  },"138": {
     "doc": "XML View",
     "title": "XML View",
     "content": "KDRS Search &amp; View can be configured using XML. Features can be extended by using a Ruby View . XML displaying the example Sakila database. For an in-depth walkthrough of making this template and adding more features, see the guide. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;sakila movie database&lt;/description&gt; &lt;view&gt; &lt;name&gt;movies&lt;/name&gt; &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;movies&lt;/title&gt; &lt;fields&gt;title,description,release_year&lt;/fields&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
     "url": "/xml/",
     
     "relUrl": "/xml/"
-  },"138": {
+  },"139": {
     "doc": "description",
     "title": "description",
     "content": "Descripe which system this template is used for . &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;views for sakila film database&lt;/description&gt; ... ",
     "url": "/xml/description/",
     
     "relUrl": "/xml/description/"
-  },"139": {
+  },"140": {
     "doc": "edit",
     "title": "Example",
     "content": "&lt;table&gt; ... &lt;edit&gt;[0..2]&lt;/edit&gt; &lt;!-- extracts country code +47 from +4790011111 --&gt; &lt;edit&gt;date.in_time_zone&lt;/edit&gt; &lt;!-- converts to local time zone --&gt; &lt;edit&gt;date.in_time_zone.strftime(\"%d.%m.%Y\")&lt;/edit&gt; &lt;!-- converts to local time zone, and returns string in norwegian date format --&gt; &lt;edit&gt;semester.sub(\"s1\",\"semester 1\")&lt;/edit&gt; &lt;!-- semester 1 instead of s1 --&gt; &lt;edit&gt;grade.sub(/^.{0}$/,\"---\")&lt;/edit&gt; &lt;!-- If no grade, draw a line --&gt; &lt;edit&gt;timer.sub(\".0\",\"\")&lt;/edit&gt; &lt;!-- e.g. 5 instead of 5.0 --&gt; &lt;edit&gt;location.capitalize&lt;/edit&gt; &lt;!-- Trondheim is a city in norway --&gt; &lt;edit&gt;location.titleize&lt;/edit&gt; &lt;!-- Trondheim Is A City In Norway --&gt; &lt;edit&gt;location.downcase&lt;/edit&gt; &lt;!-- trondheim is a city in norway --&gt; &lt;edit&gt;location.upcase&lt;/edit&gt; &lt;!-- TRONDHEIM IS A CITY IN NORWAY --&gt; . Note Searching on edited fields will currently search in the original data. ",
     "url": "/xml/edit/#example",
     
     "relUrl": "/xml/edit/#example"
-  },"140": {
+  },"141": {
     "doc": "edit",
     "title": "edit",
     "content": "Field values can be edited by using this tag. If the field is renamed, use the new name Any Ruby method can be used, as long as its on the format field.method or field[0..3]. Multiple methods can be chained, e.g. field.method1.method2 etc. A field can have multiple edit tags The edits will be done in the final table, after all the lookups (joins). Sorting will be done after the edits. ",
     "url": "/xml/edit/",
     
     "relUrl": "/xml/edit/"
-  },"141": {
+  },"142": {
     "doc": "export",
     "title": "export",
     "content": "Places a button in the view for easy printing or downloading multiple files in one Zip-archive. To add a print button: . &lt;table&gt; &lt;export&gt;print&lt;/export&gt; . To add selection boxes and a button for downloading multiple files as a Zip-file: . &lt;table&gt; &lt;export&gt;download&lt;/export&gt; &lt;filename&gt;doctitle&lt;/filename&gt; . Note When using the download export option, it is highly recommended to use the &lt;filename&gt; tag to give the files in the Zip-archive meaningful names. To do both: . &lt;table&gt; &lt;export&gt;download,print&lt;/export&gt; . ",
     "url": "/xml/export/",
     
     "relUrl": "/xml/export/"
-  },"142": {
+  },"143": {
     "doc": "fields",
     "title": "fields",
     "content": "Select which fields will be disiplayed from the table . &lt;table&gt; &lt;fields&gt;fname as first name, lname as last name, mobile&lt;/fields&gt; . fields can be renamed by using as . ",
     "url": "/xml/fields/",
     
     "relUrl": "/xml/fields/"
-  },"143": {
+  },"144": {
     "doc": "filename",
     "title": "filename",
     "content": "Choose a field that gives files their filename on download. &lt;table&gt; &lt;name&gt;folder&lt;/name&gt; &lt;fields&gt;docid,fileobject,doctitle&lt;/fields&gt; &lt;filename&gt;doctitle&lt;/filename&gt; &lt;export&gt;download&lt;/export&gt; . In the example above, files downloaded will get the filename of the content within the ‘doctitle’ field from the same row. This tag is especially useful when using &lt;export&gt;download&lt;/export&gt;, because if no &lt;filename&gt; is specified, every file in the Zip-archive will default to the name of the field. ",
     "url": "/xml/filename/",
     
     "relUrl": "/xml/filename/"
-  },"144": {
+  },"145": {
     "doc": "filter",
     "title": "Example: One criteria",
     "content": "&lt;filter&gt;name:\"school\"&lt;/filter&gt; . ",
     "url": "/xml/filter/#example-one-criteria",
     
     "relUrl": "/xml/filter/#example-one-criteria"
-  },"145": {
+  },"146": {
     "doc": "filter",
     "title": "Example: Criteria using OR",
     "content": "&lt;filter&gt;type:\"s\" OR type:\"e\"&lt;/filter&gt; . ",
     "url": "/xml/filter/#example-criteria-using-or",
     
     "relUrl": "/xml/filter/#example-criteria-using-or"
-  },"146": {
+  },"147": {
     "doc": "filter",
     "title": "Example: Criteria using AND",
     "content": "&lt;filter&gt;type:\"documentary\" AND release_year:\"2006\"&lt;/filter&gt; . ",
     "url": "/xml/filter/#example-criteria-using-and",
     
     "relUrl": "/xml/filter/#example-criteria-using-and"
-  },"147": {
+  },"148": {
     "doc": "filter",
     "title": "Example: Criteria using AND - multi tag",
     "content": "This is equivalent to using 1 tag with AND: . &lt;filter&gt;type:\"documentary\"&lt;/filter&gt; &lt;filter&gt;release_year:\"2006\"&lt;/filter&gt; . ",
     "url": "/xml/filter/#example-criteria-using-and---multi-tag",
     
     "relUrl": "/xml/filter/#example-criteria-using-and---multi-tag"
-  },"148": {
+  },"149": {
     "doc": "filter",
     "title": "Example: Find non value rows",
     "content": "Shorthand for finding rows that does not have any value for a field Note This is different from rows with an empty string. &lt;filter&gt;personid:nil&lt;/filter&gt; . We insert the proper solr syntax for this . Note Best practice is to use “ “ for the filter values, so that special characters does not alter the query. ",
     "url": "/xml/filter/#example-find-non-value-rows",
     
     "relUrl": "/xml/filter/#example-find-non-value-rows"
-  },"149": {
+  },"150": {
     "doc": "filter",
     "title": "filter",
     "content": "Data can be filtered. solr syntax can be used, but use human display names for the fields . Use AND or OR in uppercase to combine multiple criteria. Multiple filter tags are supported. They will be combined with AND. The tag belongs inside a table tag or a lookup tag . &lt;table&gt; &lt;filter&gt; . &lt;lookup&gt; &lt;filter&gt; . ",
     "url": "/xml/filter/",
     
     "relUrl": "/xml/filter/"
-  },"150": {
+  },"151": {
     "doc": "footer",
     "title": "footer",
     "content": "If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header or a footer. &lt;table&gt; &lt;fields&gt;diploma_id&lt;/fields&gt; &lt;footer&gt;diploma_id&lt;/footer&gt; . If you rename a field, use the renamed value for the footer . &lt;table&gt; &lt;fields&gt;diploma_id as nr&lt;/fields&gt; &lt;header&gt;nr&lt;/header&gt; . If the data is of primary nature, you can use a header instead. Make sure the data is really unique, because the column will be hidden. The first letter will be capitalized. ",
     "url": "/xml/footer/",
     
     "relUrl": "/xml/footer/"
-  },"151": {
+  },"152": {
     "doc": "foreignkey",
     "title": "foreignkey",
     "content": "If this is a child table, this key will match against the primary key of the parent table. This key is not needed for parent tables. &lt;table&gt; &lt;foreignkey&gt;fk_person&lt;/foreignkey&gt; . In child tables, you can use multiple foreign keys to match against multiple primary keys. ",
     "url": "/xml/foreignkey/",
     
     "relUrl": "/xml/foreignkey/"
-  },"152": {
+  },"153": {
     "doc": "header",
     "title": "header",
     "content": "If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header above the table. &lt;table&gt; &lt;fields&gt;firstname&lt;/fields&gt; &lt;header&gt;firstname&lt;/header&gt; . If you rename a field, use the renamed value for header . &lt;table&gt; &lt;fields&gt;fname as firstname&lt;/fields&gt; &lt;header&gt;firstname&lt;/header&gt; . If the data is of second nature, you can use a footer instead. Make sure the data is really unique, because the column will be hidden. The first letter will be capitalized. ",
     "url": "/xml/header/",
     
     "relUrl": "/xml/header/"
-  },"153": {
+  },"154": {
     "doc": "lookup",
     "title": "lookup",
     "content": "Lookup an id in another table, and get one or more other values. Example: For each personid in table group, lookup this person in table people to find his/her firstname, lastname, phone and nationality_code. Do another lookup to expand the nationality_code into text. Repeat as many times as necessary to reach your goal. &lt;table&gt; &lt;name&gt;group&lt;/name&gt; &lt;fields&gt;personid&lt;/fields&gt; &lt;lookup&gt; &lt;foreignkey&gt;personid&lt;/foreignkey&gt; &lt;table&gt;people&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;firstname,lastname,phone,nationality_code&lt;/fields&gt; &lt;/lookup&gt; &lt;lookup&gt; &lt;foreignkey&gt;nationality_code&lt;/foreignkey&gt; &lt;table&gt;nationalities&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;nationality&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; . The resulting table will expand with new columns. If the lookup table have multiple lines for the same person, also the number of rows will increase. ",
     "url": "/xml/lookup/",
     
     "relUrl": "/xml/lookup/"
-  },"154": {
+  },"155": {
     "doc": "name",
     "title": "View name",
     "content": "Name of the view . ",
     "url": "/xml/name/#view-name",
     
     "relUrl": "/xml/name/#view-name"
-  },"155": {
+  },"156": {
     "doc": "name",
     "title": "Table name",
     "content": "This name must correspond to a name in the database. ",
     "url": "/xml/name/#table-name",
     
     "relUrl": "/xml/name/#table-name"
-  },"156": {
+  },"157": {
     "doc": "name",
     "title": "name",
     "content": "Can be used to name a view or a table. &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; &lt;name&gt;students&lt;/name&gt; . ",
     "url": "/xml/name/",
     
     "relUrl": "/xml/name/"
-  },"157": {
+  },"158": {
     "doc": "> Outline",
     "title": "> Outline",
     "content": "Index of every tag and its suggested order. Click a tag to learn more. For a more basic example see XML View . &lt;views&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;description&gt;example using all tags&lt;/description&gt; &lt;view&gt; &lt;name&gt;diploma&lt;/name&gt; &lt;schema&gt;db1&lt;/schema&gt; &lt;table&gt; &lt;name&gt;diploma&lt;/name&gt; &lt;title&gt;diploma&lt;/title&gt; &lt;parent&gt;person&lt;/parent&gt; &lt;fields&gt;fname as first_name,dob as birthdate,school,class,addressid,diploma_pdf&lt;/fields&gt; &lt;primarykey&gt;diplomaid&lt;/primarykey&gt; &lt;foreignkey&gt;personid&lt;/foreignkey&gt; &lt;filter&gt;first_name:\"arild\"&lt;/filter&gt; &lt;sort&gt;first_name&lt;/sort&gt; &lt;rubyview&gt;diploma&lt;/rubyview&gt; &lt;header&gt;school&lt;/header&gt; &lt;footer&gt;class&lt;/footer&gt; &lt;export&gt;print,download&lt;/export&gt; &lt;filename&gt;diploma_pdf&lt;/filename&gt; &lt;preview&gt;false&lt;/preview&gt; &lt;search&gt;false&lt;/search&gt; &lt;rows&gt;50&lt;/rows&gt; &lt;edit&gt;birthdate[0..9]&lt;/edit&gt; &lt;lookup&gt; &lt;foreignkey&gt;addressid&lt;/foreignkey&gt; &lt;table&gt;address&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;street,city,country&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
     "url": "/xml/outline/",
     
     "relUrl": "/xml/outline/"
-  },"158": {
+  },"159": {
     "doc": "parent",
     "title": "Showing parent tables side by side",
     "content": "Child tables that have the same parent will be listed side by side as tabs. Sometimes you may want to do this for multiple parent tables as well. You can use the parent tag with a dummy value like this: . &lt;table&gt; &lt;parent&gt;top&lt;/parent&gt; . ",
     "url": "/xml/parent/#showing-parent-tables-side-by-side",
     
     "relUrl": "/xml/parent/#showing-parent-tables-side-by-side"
-  },"159": {
+  },"160": {
     "doc": "parent",
     "title": "parent",
     "content": "The table name of a parent table. This will make this table a child table, and they will be linked. Parents primary key will match the childs foreign key. &lt;table&gt; &lt;parent&gt;person&lt;/parent&gt; . ",
     "url": "/xml/parent/",
     
     "relUrl": "/xml/parent/"
-  },"160": {
+  },"161": {
     "doc": "preview",
     "title": "preview",
     "content": "Shows a preview of the data. This is typically used if the number of choices are few, and the user does not need to search for the data. For sensitive data its recommended to disable the preview and require a spesific search. Example: . &lt;table&gt; &lt;preview&gt;false&lt;/preview&gt; . ",
     "url": "/xml/preview/",
     
     "relUrl": "/xml/preview/"
-  },"161": {
+  },"162": {
     "doc": "primarykey",
     "title": "primarykey",
     "content": "The primary key for this table . &lt;table&gt; &lt;primarykey&gt;person_id&lt;/primarykey&gt; . Sometimes there are multiple candidates. Choose the one that the child tables will refer to. You can also send multiple keys, if the next table needs more parameters. &lt;table&gt; &lt;primarykey&gt;person_id,type&lt;/primarykey&gt; . When selecting a table row, this value or values will be sent as a parameter to the next view. They will be matched against the foreign key in the child table. Se foreignkey for more info. ",
     "url": "/xml/primarykey/",
     
     "relUrl": "/xml/primarykey/"
-  },"162": {
+  },"163": {
     "doc": "rows",
     "title": "Sorting",
     "content": "Beware that sorting will sort this number of rows. One page at a time. If you need to sort across all pages, then increase this number to avoid paging entirely. ",
     "url": "/xml/rows/#sorting",
     
     "relUrl": "/xml/rows/#sorting"
-  },"163": {
+  },"164": {
     "doc": "rows",
     "title": "Performance",
     "content": "Check to see if the increased loading time for the view is acceptable. Tip Increase the number of rows to get them all in a pdf, or sent to printer. ",
     "url": "/xml/rows/#performance",
     
     "relUrl": "/xml/rows/#performance"
-  },"164": {
+  },"165": {
     "doc": "rows",
     "title": "rows",
     "content": "Default number of rows is 20. Use this tag to change the default for this view. E.g. for a diploma we always want all rows on the same page, so we set a high number. &lt;table&gt; &lt;rows&gt;1000&lt;/rows&gt; . ",
     "url": "/xml/rows/",
     
     "relUrl": "/xml/rows/"
-  },"165": {
+  },"166": {
     "doc": "rubyview",
     "title": "rubyview",
     "content": "You can make a Ruby View if you want advanced layout or features. This is a HTML file with some embedded Ruby. Make a file e.g. templates/school_app/_diploma.html.erb You can edit both the data and the presentation. See Ruby View for more info. &lt;table&gt; &lt;rubyview&gt;diploma&lt;/rubyview&gt; . Data from the xml file will be available in @docs . ",
     "url": "/xml/rubyview/",
     
     "relUrl": "/xml/rubyview/"
-  },"166": {
+  },"167": {
     "doc": "schema",
     "title": "Supporting different siard files",
     "content": "If we have two siard files from the same system, we can experience that one has a schema, and the other not. Then enter a schema name in the xml, and the system will fall back to the first schema if not found. In this way we can keep using the same view configuration. ",
     "url": "/xml/schema/#supporting-different-siard-files",
     
     "relUrl": "/xml/schema/#supporting-different-siard-files"
-  },"167": {
+  },"168": {
     "doc": "schema",
     "title": "schema",
     "content": "Some large databases are divided into parts called a schema. A table is uniquely referenced by using naming schema.table. To simplify table names, it is recommended to assign a default value for schema. This tag is not needed for simple databases with only one schema. &lt;view&gt; &lt;name&gt;karakterer&lt;/name&gt; &lt;schema&gt;ist&lt;/schema&gt; . ",
     "url": "/xml/schema/",
     
     "relUrl": "/xml/schema/"
-  },"168": {
+  },"169": {
     "doc": "search",
     "title": "search",
     "content": "A table will be searchable by default. If you want to turn this off, you can set this value to false. &lt;table&gt; &lt;search&gt;false&lt;/search&gt; . Tip Use this for reports, to get a more compact and printer friendly output. ",
     "url": "/xml/search/",
     
     "relUrl": "/xml/search/"
-  },"169": {
+  },"170": {
     "doc": "sort",
     "title": "sort",
     "content": "Sort the current page based on the given column. Use the &lt;rows&gt; tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. You can sort on one or more columns, either in ascending or descending order. Note If the field is renamed, use the new name. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; &lt;sort&gt;lastname desc&lt;/sort&gt; &lt;!-- sorts in descending order --&gt; &lt;sort&gt;date desc, lastname&lt;/sort&gt; &lt;!-- sorts by date first in descending order, and then by last name when dates are equal --&gt; . ",
     "url": "/xml/sort/",
     
     "relUrl": "/xml/sort/"
-  },"170": {
+  },"171": {
     "doc": "table",
     "title": "table",
     "content": "Marks the beginning of a new table configuration. Other fields must preceed this field as shown. If multiple tables, placed them on the same level, beneath each other. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;views for extens&lt;/description&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; &lt;name&gt;students&lt;/name&gt; &lt;title&gt;students&lt;/title&gt; &lt;fields&gt;students&lt;/fields&gt; &lt;primarykey&gt;students&lt;/primarykey&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . Note The tags used above are the only required tags. ",
     "url": "/xml/table/",
     
     "relUrl": "/xml/table/"
-  },"171": {
+  },"172": {
     "doc": "title",
     "title": "title",
     "content": "Creates a title for the table . &lt;table&gt; &lt;name&gt;student&lt;/name&gt; &lt;title&gt;find student&lt;/title&gt; . The first letter will be capitalized. ",
     "url": "/xml/title/",
     
     "relUrl": "/xml/title/"
-  },"172": {
+  },"173": {
     "doc": "version",
     "title": "version",
     "content": "Version is the version of this configuration file. Convention is major.minor.patch Development starts with 0.1.0, then 0.2.0 if new feature, or 0.1.1 if bugfix. Increase major version to 1.0.0 when ready for production. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;for school system abc&lt;/description&gt; ... ",
     "url": "/xml/version/",
     
     "relUrl": "/xml/version/"
-  },"173": {
+  },"174": {
     "doc": "view",
     "title": "view",
     "content": "Marks the beginning av a new view. A view has a name and one or more tables. Example: . &lt;views&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; ... ",
     "url": "/xml/view/",
     
     "relUrl": "/xml/view/"
-  },"174": {
+  },"175": {
     "doc": "views",
     "title": "views",
     "content": "Group all the views. All configuration files start with &lt;views&gt; and ends with &lt;/views&gt; . Example: . &lt;views&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; ... &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
