@@ -22,19 +22,19 @@ Use the following command, replacing the email with yours.
 
 This dialog should show up:
 
-![]({{ site.baseurl }}/assets/images/git/ssh-keygen-1.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/ssh-keygen-1.png)
 
 Press enter to save the key at the default path.
 
 
 You will now be asked to enter a passphrase that you will need to use your private key.
 
-![]({{ site.baseurl }}/assets/images/git/ssh-keygen-2.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/ssh-keygen-2.png)
 
 
 Your SSH key pair will now be generated: 
 
-![]({{ site.baseurl }}/assets/images/git/ssh-keygen-3.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/ssh-keygen-3.png)
 
 Your key pair will be stored at the following paths:
 
@@ -50,23 +50,23 @@ The file `id_ed25519.pub` is your public key, and should be shared with services
 
 1. Log in to [maler.kdrs.no](https://maler.kdrs.no/) and click your profile picture in the top right corner
 <br>
-![]({{ site.baseurl }}/assets/images/git/github-key-1.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/github-key-1.png)
 
 2. Click settings
 <br>
-![]({{ site.baseurl }}/assets/images/git/github-key-2.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/github-key-2.png)
 
 1. Click SSH / GPG keys
 <br>
-![]({{ site.baseurl }}/assets/images/git/github-key-3.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/github-key-3.png)
 
 1. Click Add key in the "Manage SSH keys" panel
 <br>
-![]({{ site.baseurl }}/assets/images/git/github-key-4.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/github-key-4.png)
 
 1. Enter a title of your choice. Open your SSH public key (id_ed25519.pub) in a text editor and copy its contents to the content field.
 <br>
-![]({{ site.baseurl }}/assets/images/git/github-key-5.png)
+![]({{ site.baseurl }}/assets/images/guides/git/setup/github-key-5.png)
 
 1. Click "Add SSH key".
 
