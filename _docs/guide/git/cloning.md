@@ -3,7 +3,7 @@ layout: guide
 title: Cloning
 parent: Working with Git
 grand_parent: Guides
-nav_order: 2
+nav_order: 3
 ---
 
 In Git, "clone" means to download a repository (project) to your computer.
