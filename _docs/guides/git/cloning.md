@@ -9,7 +9,7 @@ nav_order: 3
 In Git, "clone" means to download a repository (project) to your computer.
 
 
-To clone a template from Git, open VS Code on the machine you want to edit templates on, or connect remotely. A guide for this can be found [here]({{ 'guide/make-a-template/part-0-editing-environment/' | relative_url }}).
+To clone a template from Git, open VS Code on the machine you want to edit templates on, or connect remotely. A guide for this can be found [here]({{ 'guides/make-a-template/part-0-editing-environment/' | relative_url }}).
 
 Open the folder `/var/kdrs/sv/templates`
 

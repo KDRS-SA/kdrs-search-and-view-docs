@@ -6,7 +6,7 @@ grand_parent: Guides
 nav_order: 2
 ---
 
-After configuring your authentication in the [previous step]({{ 'guide/git/setup' | relative_url }}), you can edit templates you have permissions for.
+After configuring your authentication in the [previous step]({{ 'guides/git/setup' | relative_url }}), you can edit templates you have permissions for.
 
 1. Start by opening the template you want to edit in VS Code. `File -> Open Folder` and enter the path to the template.
 <br><br>
