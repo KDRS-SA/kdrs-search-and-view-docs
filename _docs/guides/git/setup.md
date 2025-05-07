@@ -72,6 +72,14 @@ The file `id_ed25519.pub` is your public key, and should be shared with services
 
 You are now able to authenticate with Git over SSH, on any machine where you private key (`id_ed25519`) is in your `.ssh` folder.
 
+## Adding your contact information to git
+
+To make changes in Git, you need to add your name and email to your git configuration so that other people will can see who is the author of your commits. Do this with the following two commands:
+
+`git config --global user.name "Arild Arkivarildsen"`
+
+`git config --global user.email "arild@detbestearkivet.no"`
+
 ## Adding your private key to another machine
 
 If you need to connect to Git from a different machine, or a virtual machine, you need to transfer your SSH private key to that machine. Copy your `id_ed25519` to the following directory:
@@ -80,7 +88,7 @@ Windows: `C:\Users\<username>\.ssh\`
 
 Unix: `/home/<username>/.ssh/`
 
-On Unix the SSH private key needs to not be readable by other users. This can be done with the following command:
+On Unix the SSH private key needs to not be readable by other users. This can be done with the following commands:
 
 `chmod 600 ~/.ssh/id_ed25519` 
 
