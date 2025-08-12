@@ -37,25 +37,25 @@ Movie database for tutorial purposes
 # Sats Skole
 Vendor: IST
 
-# System X 🆕
+# System X 
 Vendor: Hove Medical Systems AS
 
-# Tieto Gerica 🆕
+# Tieto Gerica 
 Vendor: Tietoevry Care
 
-# VIGO Voksen 🆕
+# VIGO Voksen 
 Previous name: Realdok
 
 # Visma BVPro
 Previous vendor: Hiadata
 
-# Visma Familia 🆕
+# Visma Familia 
 Vendor: Visma
 
-# Visma Marthe 🆕
+# Visma Marthe 
 Vendor: Visma
 
-# Visma Oskar 🆕
+# Visma Oskar 
 Vendor: Visma\
 Previous Vendor: Unique
 
@@ -66,7 +66,7 @@ Previous Vendor: Unique
 # Visma Velferd (pågår)
 Vendor: Visma
 
-# Vitec HK data - oppvekst 🆕
+# Vitec HK data - oppvekst 
 Et skreddersydd fagsystem for å ivareta PP-tjenestens behov
 
 # Vitec Plania (pågår)
