@@ -23,7 +23,7 @@ Vendor: IST
 
 # iSkole
 
-# Kontor 2000 (påstartet)
+# Kontor 2000 (påbegynt)
 Vendor: Sikri\
 Previous vendor: Evry
 
