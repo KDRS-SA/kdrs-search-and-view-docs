@@ -834,7 +834,7 @@
   },"119": {
     "doc": "Templates",
     "title": "Table of Contents",
-    "content": ". | Extens skole | iSkole (kommer) | Kontor 2000 (pågår) | Otto | Sakila | Sats Skole | System X | Tieto Gerica | VIGO Voksen | Visma BVPro | Visma Familia | Visma Marthe | Visma Oskar | Visma PPI | Visma Velferd (pågår) | Vitec HK data - oppvekst | Vitec Plania (pågår) | WIS Skole | Other | . ",
+    "content": ". | Extens skole | iSkole | Kontor 2000 (påstartet) | Otto | Sakila | Sats Skole | System X | Tieto Gerica | VIGO Voksen | Visma BVPro | Visma Familia | Visma Marthe | Visma Oskar | Visma PPI | Visma Velferd (påbegynt) | Vitec HK data - oppvekst | Vitec Plania (påbegynt) | WIS Skole | Other | . ",
     "url": "/version/1.6/templates/#table-of-contents",
     
     "relUrl": "/templates/#table-of-contents"
@@ -847,18 +847,18 @@
     "relUrl": "/templates/#extens-skole"
   },"121": {
     "doc": "Templates",
-    "title": "iSkole (kommer)",
+    "title": "iSkole",
     "content": " ",
-    "url": "/version/1.6/templates/#iskole-kommer",
+    "url": "/version/1.6/templates/#iskole",
     
-    "relUrl": "/templates/#iskole-kommer"
+    "relUrl": "/templates/#iskole"
   },"122": {
     "doc": "Templates",
-    "title": "Kontor 2000 (pågår)",
+    "title": "Kontor 2000 (påstartet)",
     "content": "Vendor: Sikri Previous vendor: Evry . ",
-    "url": "/version/1.6/templates/#kontor-2000-p%C3%A5g%C3%A5r",
+    "url": "/version/1.6/templates/#kontor-2000-p%C3%A5startet",
     
-    "relUrl": "/templates/#kontor-2000-pågår"
+    "relUrl": "/templates/#kontor-2000-påstartet"
   },"123": {
     "doc": "Templates",
     "title": "Otto",
@@ -938,11 +938,11 @@
     "relUrl": "/templates/#visma-ppi"
   },"134": {
     "doc": "Templates",
-    "title": "Visma Velferd (pågår)",
+    "title": "Visma Velferd (påbegynt)",
     "content": "Vendor: Visma . ",
-    "url": "/version/1.6/templates/#visma-velferd-p%C3%A5g%C3%A5r",
+    "url": "/version/1.6/templates/#visma-velferd-p%C3%A5begynt",
     
-    "relUrl": "/templates/#visma-velferd-pågår"
+    "relUrl": "/templates/#visma-velferd-påbegynt"
   },"135": {
     "doc": "Templates",
     "title": "Vitec HK data - oppvekst",
@@ -952,11 +952,11 @@
     "relUrl": "/templates/#vitec-hk-data---oppvekst"
   },"136": {
     "doc": "Templates",
-    "title": "Vitec Plania (pågår)",
+    "title": "Vitec Plania (påbegynt)",
     "content": "Eiendomsadministrasjon . ",
-    "url": "/version/1.6/templates/#vitec-plania-p%C3%A5g%C3%A5r",
+    "url": "/version/1.6/templates/#vitec-plania-p%C3%A5begynt",
     
-    "relUrl": "/templates/#vitec-plania-pågår"
+    "relUrl": "/templates/#vitec-plania-påbegynt"
   },"137": {
     "doc": "Templates",
     "title": "WIS Skole",
