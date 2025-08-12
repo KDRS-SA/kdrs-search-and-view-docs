@@ -834,7 +834,7 @@
   },"119": {
     "doc": "Templates",
     "title": "Table of Contents",
-    "content": ". | Extens skole | iSkole (kommer) | Kontor 2000 (pågår) | Otto | Sakila | Sats Skole | System X 🆕 | Tieto Gerica 🆕 | VIGO Voksen 🆕 | Visma BVPro | Visma Familia 🆕 | Visma Marthe 🆕 | Visma Oskar 🆕 | Visma PPI | Visma Velferd (pågår) | Vitec HK data - oppvekst 🆕 | Vitec Plania (pågår) | WIS Skole | Other | . ",
+    "content": ". | Extens skole | iSkole (kommer) | Kontor 2000 (pågår) | Otto | Sakila | Sats Skole | System X | Tieto Gerica | VIGO Voksen | Visma BVPro | Visma Familia | Visma Marthe | Visma Oskar | Visma PPI | Visma Velferd (pågår) | Vitec HK data - oppvekst | Vitec Plania (pågår) | WIS Skole | Other | . ",
     "url": "/version/1.6/templates/#table-of-contents",
     
     "relUrl": "/templates/#table-of-contents"
@@ -882,25 +882,25 @@
     "relUrl": "/templates/#sats-skole"
   },"126": {
     "doc": "Templates",
-    "title": "System X 🆕",
+    "title": "System X",
     "content": "Vendor: Hove Medical Systems AS . ",
-    "url": "/version/1.6/templates/#system-x-",
+    "url": "/version/1.6/templates/#system-x",
     
-    "relUrl": "/templates/#system-x-"
+    "relUrl": "/templates/#system-x"
   },"127": {
     "doc": "Templates",
-    "title": "Tieto Gerica 🆕",
+    "title": "Tieto Gerica",
     "content": "Vendor: Tietoevry Care . ",
-    "url": "/version/1.6/templates/#tieto-gerica-",
+    "url": "/version/1.6/templates/#tieto-gerica",
     
-    "relUrl": "/templates/#tieto-gerica-"
+    "relUrl": "/templates/#tieto-gerica"
   },"128": {
     "doc": "Templates",
-    "title": "VIGO Voksen 🆕",
+    "title": "VIGO Voksen",
     "content": "Previous name: Realdok . ",
-    "url": "/version/1.6/templates/#vigo-voksen-",
+    "url": "/version/1.6/templates/#vigo-voksen",
     
-    "relUrl": "/templates/#vigo-voksen-"
+    "relUrl": "/templates/#vigo-voksen"
   },"129": {
     "doc": "Templates",
     "title": "Visma BVPro",
@@ -910,25 +910,25 @@
     "relUrl": "/templates/#visma-bvpro"
   },"130": {
     "doc": "Templates",
-    "title": "Visma Familia 🆕",
+    "title": "Visma Familia",
     "content": "Vendor: Visma . ",
-    "url": "/version/1.6/templates/#visma-familia-",
+    "url": "/version/1.6/templates/#visma-familia",
     
-    "relUrl": "/templates/#visma-familia-"
+    "relUrl": "/templates/#visma-familia"
   },"131": {
     "doc": "Templates",
-    "title": "Visma Marthe 🆕",
+    "title": "Visma Marthe",
     "content": "Vendor: Visma . ",
-    "url": "/version/1.6/templates/#visma-marthe-",
+    "url": "/version/1.6/templates/#visma-marthe",
     
-    "relUrl": "/templates/#visma-marthe-"
+    "relUrl": "/templates/#visma-marthe"
   },"132": {
     "doc": "Templates",
-    "title": "Visma Oskar 🆕",
+    "title": "Visma Oskar",
     "content": "Vendor: Visma Previous Vendor: Unique . ",
-    "url": "/version/1.6/templates/#visma-oskar-",
+    "url": "/version/1.6/templates/#visma-oskar",
     
-    "relUrl": "/templates/#visma-oskar-"
+    "relUrl": "/templates/#visma-oskar"
   },"133": {
     "doc": "Templates",
     "title": "Visma PPI",
@@ -945,11 +945,11 @@
     "relUrl": "/templates/#visma-velferd-pågår"
   },"135": {
     "doc": "Templates",
-    "title": "Vitec HK data - oppvekst 🆕",
+    "title": "Vitec HK data - oppvekst",
     "content": "Et skreddersydd fagsystem for å ivareta PP-tjenestens behov . ",
-    "url": "/version/1.6/templates/#vitec-hk-data---oppvekst-",
+    "url": "/version/1.6/templates/#vitec-hk-data---oppvekst",
     
-    "relUrl": "/templates/#vitec-hk-data---oppvekst-"
+    "relUrl": "/templates/#vitec-hk-data---oppvekst"
   },"136": {
     "doc": "Templates",
     "title": "Vitec Plania (pågår)",
