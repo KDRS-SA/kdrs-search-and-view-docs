@@ -21,9 +21,9 @@ To make your own template - see [Guides]({{ 'guides' | relative_url }})
 # Extens skole
 Vendor: IST
 
-# iSkole (kommer)
+# iSkole
 
-# Kontor 2000 (pågår)
+# Kontor 2000 (påstartet)
 Vendor: Sikri\
 Previous vendor: Evry
 
@@ -63,13 +63,13 @@ Previous Vendor: Unique
 Vendor: Visma\
 Previous Vendor: Unique
 
-# Visma Velferd (pågår)
+# Visma Velferd (påbegynt)
 Vendor: Visma
 
 # Vitec HK data - oppvekst 
 Et skreddersydd fagsystem for å ivareta PP-tjenestens behov
 
-# Vitec Plania (pågår)
+# Vitec Plania (påbegynt)
 Eiendomsadministrasjon
 
 # WIS Skole
