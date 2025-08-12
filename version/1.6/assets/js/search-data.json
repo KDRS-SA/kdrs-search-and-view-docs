@@ -834,7 +834,7 @@
   },"119": {
     "doc": "Templates",
     "title": "Table of Contents",
-    "content": ". | Extens skole | iSkole | Kontor 2000 (påstartet) | Otto | Sakila | Sats Skole | System X | Tieto Gerica | VIGO Voksen | Visma BVPro | Visma Familia | Visma Marthe | Visma Oskar | Visma PPI | Visma Velferd (påbegynt) | Vitec HK data - oppvekst | Vitec Plania (påbegynt) | WIS Skole | Other | . ",
+    "content": ". | Extens skole | iSkole | Kontor 2000 (påbegynt) | Otto | Sakila | Sats Skole | System X | Tieto Gerica | VIGO Voksen | Visma BVPro | Visma Familia | Visma Marthe | Visma Oskar | Visma PPI | Visma Velferd (påbegynt) | Vitec HK data - oppvekst | Vitec Plania (påbegynt) | WIS Skole | Other | . ",
     "url": "/version/1.6/templates/#table-of-contents",
     
     "relUrl": "/templates/#table-of-contents"
@@ -854,11 +854,11 @@
     "relUrl": "/templates/#iskole"
   },"122": {
     "doc": "Templates",
-    "title": "Kontor 2000 (påstartet)",
+    "title": "Kontor 2000 (påbegynt)",
     "content": "Vendor: Sikri Previous vendor: Evry . ",
-    "url": "/version/1.6/templates/#kontor-2000-p%C3%A5startet",
+    "url": "/version/1.6/templates/#kontor-2000-p%C3%A5begynt",
     
-    "relUrl": "/templates/#kontor-2000-påstartet"
+    "relUrl": "/templates/#kontor-2000-påbegynt"
   },"123": {
     "doc": "Templates",
     "title": "Otto",
