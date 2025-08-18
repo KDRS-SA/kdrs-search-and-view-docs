@@ -5,11 +5,17 @@ parent: XML View
 ---
 Default number of rows is 20. Use this tag to change the default for this view.
 
-E.g. for a diploma we always want all rows on the same page, so we set a high number.
 {% highlight xml %}
     <table>
         <rows>1000</rows>
 {% endhighlight %}
+
+Use keyword max to get our suggested maximum. (Currently set to 10.000 rows)
+{% highlight xml %}
+    <table>
+        <rows>max</rows>
+{% endhighlight %}
+
 
 ## Sorting
 Beware that sorting will sort this number of rows. One page at a time. If you need to sort across all pages, then increase this number to avoid paging entirely. 
