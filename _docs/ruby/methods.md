@@ -97,25 +97,3 @@ The next view can check this param
   <% if params["from_table"] == "report" %>
 {% endhighlight %}
 
-## Render header
-{% highlight erb %}
-  <%= render 'header' %>
-{% endhighlight %}
-
-`@header_fields` array of fields \
-`@docs` the table, or optionally send parameter docs: my_docs \
-`@show_fields` will be used to detect table size and formatting \
-
-field values will be fetched from the first row in the table
-
-## Render footer
-{% highlight erb %}
-  <%= render 'footer' %>
-{% endhighlight %}
-
-`@footer_fields` array of fields \
-`@docs` the table, or optionally send parameter docs: my_docs \
-`@show_fields` will be used to detect table size and formatting \
-
-field values will be fetched from the first row in the table
-
