@@ -7,7 +7,7 @@ bvv:
 cosdoc:
   new: true
 demo:
-  exclude: true
+  hidden: true
 forum-winsak:
   new: true
 profil:
