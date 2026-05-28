@@ -11,10 +11,17 @@ Built by KDRS and members.
 Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
 {: .fs-6 .fw-300 }
 
+{% assign hidden_slugs = "" %}
+{% for item in site.data.templates_override %}
+  {% if item[1].hidden %}
+    {% assign hidden_slugs = hidden_slugs | append: "," | append: item[0] | append: "," %}
+  {% endif %}
+{% endfor %}
+
 {% assign vendor_acc = "" %}
 {% for pair in site.data.templates %}
-  {% assign meta = site.data.templates_override[pair[0]] %}
-  {% unless meta.exclude %}
+  {% assign slug_check = "," | append: pair[0] | append: "," %}
+  {% unless hidden_slugs contains slug_check %}
     {% assign base = pair[1].vendor | split: " (" | first %}
     {% assign vendor_acc = vendor_acc | append: base | append: "||" %}
   {% endunless %}
@@ -24,8 +31,10 @@ Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
 
 {% assign template_count = 0 %}
 {% for pair in site.data.templates %}
-  {% assign meta = site.data.templates_override[pair[0]] %}
-  {% unless meta.exclude %}{% assign template_count = template_count | plus: 1 %}{% endunless %}
+  {% assign slug_check = "," | append: pair[0] | append: "," %}
+  {% unless hidden_slugs contains slug_check %}
+    {% assign template_count = template_count | plus: 1 %}
+  {% endunless %}
 {% endfor %}
 
 <div class="tpl-stats">
@@ -37,8 +46,8 @@ Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
 {% for vendor in vendor_list %}
   {% assign count = 0 %}
   {% for pair in site.data.templates %}
-    {% assign meta = site.data.templates_override[pair[0]] %}
-    {% unless meta.exclude %}
+    {% assign slug_check = "," | append: pair[0] | append: "," %}
+    {% unless hidden_slugs contains slug_check %}
       {% assign base = pair[1].vendor | split: " (" | first %}
       {% if base == vendor %}{% assign count = count | plus: 1 %}{% endif %}
     {% endunless %}
@@ -57,8 +66,8 @@ Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
     {% assign vendor = entry | split: "~" | last %}
     {% assign slugs = "" %}
     {% for pair in site.data.templates %}
-      {% assign meta = site.data.templates_override[pair[0]] %}
-      {% unless meta.exclude %}
+      {% assign slug_check = "," | append: pair[0] | append: "," %}
+      {% unless hidden_slugs contains slug_check %}
         {% assign base = pair[1].vendor | split: " (" | first %}
         {% if base == vendor %}{% assign slugs = slugs | append: pair[0] | append: "," %}{% endif %}
       {% endunless %}
