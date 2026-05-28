@@ -18,59 +18,77 @@ To make your own template - see [Guides]({{ 'guides' | relative_url }})
 1. TOC
 {:toc}
 
-# Extens skole
+# Acos Barnevern 🆕
+Vendor: DIPS
+
+# Acos Sosial 🆕
+Vendor: DIPS
+
+# CosDoc 🆕
+Vendor: DIPS
+
+# Extens
 Vendor: IST
 
-# iSkole
+# Flyt Barnevernvakt 🆕
+Vendor: Visma
 
-# Kontor 2000 (påbegynt)
-Vendor: Sikri\
-Previous vendor: Evry
+# Forum Winsak 🆕
+Vendor: Sikri (tidl. Evry/Ergo)
+
+# Gerica
+Vendor: Tieto
+
+# HK Oppvekst
+Vendor: Vitec HK Data
+
+# iSkole
+Vendor: Barman Hanssen AS
+
+# Kontor 2000
+Vendor: Sikri (tidl. Evry)
 
 # Otto
 Vendor: IST
 
-# Sakila
-Vendor: Oracle MySQL\
-Movie database for tutorial purposes
+# Profil 🆕
+Vendor: Visma
 
-# Sats Skole
+# Sakila
+Vendor: Oracle
+
+# SamPro 🆕
+Vendor: Visma
+
+# Sats skole
 Vendor: IST
 
-# System X 
+# Socio 🆕
+Vendor: Tieto
+
+# System X
 Vendor: Hove Medical Systems AS
 
-# Tieto Gerica 
-Vendor: Tietoevry Care
-
-# VIGO Voksen 
-Previous name: Realdok
+# VIGO Voksen
+Vendor: Novari IKS
 
 # Visma BVPro
-Previous vendor: Hiadata
-
-# Visma Familia 
 Vendor: Visma
 
-# Visma Marthe 
+# Visma Familia
 Vendor: Visma
 
-# Visma Oskar 
-Vendor: Visma\
-Previous Vendor: Unique
+# Visma Marthe
+Vendor: Visma (tidl. Unique)
+
+# Visma Oskar
+Vendor: Visma (tidl. Unique)
 
 # Visma PPI
-Vendor: Visma\
-Previous Vendor: Unique
+Vendor: Visma (tidl. Unique)
 
-# Visma Velferd (påbegynt)
+# Visma Velferd
 Vendor: Visma
-
-# Vitec HK data - oppvekst 
-Et skreddersydd fagsystem for å ivareta PP-tjenestens behov
-
-# Vitec Plania (påbegynt)
-Eiendomsadministrasjon
 
 # WIS Skole
 Vendor: Waade Information System
@@ -81,4 +99,3 @@ We also arrange courses to get you up to speed.\
 To make your own template - see [Guides]({{ 'guides' | relative_url }})\
 Not a member? Any other questions? \
 Please contact [help@kdrs.no](mailto:hjelp@kdrs.no)
-
