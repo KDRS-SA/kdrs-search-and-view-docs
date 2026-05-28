@@ -1,1 +1,77 @@
 // custom SCSS (or CSS) goes here
+
+// Templates page
+.tpl-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+.tpl-stat {
+  display: flex;
+  flex-direction: column;
+  font-size: .85rem;
+  color: #666;
+  padding: 1rem 1.5rem;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.07);
+  min-width: 100px;
+}
+.tpl-stat-num {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #7253ed;
+  line-height: 1;
+}
+.tpl-anchor {
+  display: none;
+}
+.tpl-vendor {
+  margin: 1.5rem 0 .5rem;
+  padding-left: .3rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #7253ed;
+}
+.tpl-count {
+  color: #888;
+  font-weight: 400;
+  margin-left: .4rem;
+  &::before { content: "("; }
+  &::after  { content: ")"; }
+}
+.tpl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.tpl-card {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .7rem 1rem;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #fff 60%, #f3f0fd);
+  border-color: #ede9fb;
+  box-shadow: 0 2px 6px rgba(114,83,237,.1);
+  transition: box-shadow .15s, transform .15s;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(114,83,237,.15);
+    transform: translateY(-2px);
+  }
+}
+.tpl-new {
+  font-size: .7rem;
+  background: #e6fbee;
+  color: #1a7f4b;
+  padding: 1px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+}

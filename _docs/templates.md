@@ -5,97 +5,80 @@ nav_order: 1
 has_children: false
 ---
 
-# Available Templates
+# Community Templates
 {: .no_toc }
-Making new templates is an ongoing work by KDRS and our members.\
-There can be templates available that are not on this list.\
-To make your own template - see [Guides]({{ 'guides' | relative_url }})
+Built by KDRS and members.
+Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
 {: .fs-6 .fw-300 }
 
-# Table of Contents
-{: .no_toc .text-delta }
+{% assign vendor_acc = "" %}
+{% for pair in site.data.templates %}
+  {% assign meta = site.data.templates_override[pair[0]] %}
+  {% unless meta.exclude %}
+    {% assign base = pair[1].vendor | split: " (" | first %}
+    {% assign vendor_acc = vendor_acc | append: base | append: "||" %}
+  {% endunless %}
+{% endfor %}
+{% assign vendor_names = vendor_acc | split: "||" | uniq %}
+{% assign vendor_list = vendor_names | where_exp: "v", "v != ''" %}
 
-1. TOC
-{:toc}
+{% assign template_count = 0 %}
+{% for pair in site.data.templates %}
+  {% assign meta = site.data.templates_override[pair[0]] %}
+  {% unless meta.exclude %}{% assign template_count = template_count | plus: 1 %}{% endunless %}
+{% endfor %}
 
-# Acos Barnevern 🆕
-Vendor: DIPS
+<div class="tpl-stats">
+  <div class="tpl-stat"><span class="tpl-stat-num">{{ template_count }}</span>templates</div>
+  <div class="tpl-stat"><span class="tpl-stat-num">{{ vendor_list | size }}</span>vendors</div>
+</div>
 
-# Acos Sosial 🆕
-Vendor: DIPS
+{% assign ranked = "" %}
+{% for vendor in vendor_list %}
+  {% assign count = 0 %}
+  {% for pair in site.data.templates %}
+    {% assign meta = site.data.templates_override[pair[0]] %}
+    {% unless meta.exclude %}
+      {% assign base = pair[1].vendor | split: " (" | first %}
+      {% if base == vendor %}{% assign count = count | plus: 1 %}{% endif %}
+    {% endunless %}
+  {% endfor %}
+  {% if count < 10 %}
+    {% assign padded = "0" | append: count %}
+  {% else %}
+    {% assign padded = count %}
+  {% endif %}
+  {% assign ranked = ranked | append: padded | append: "~" | append: vendor | append: "||" %}
+{% endfor %}
+{% assign vendors_ranked = ranked | split: "||" | sort | reverse %}
 
-# CosDoc 🆕
-Vendor: DIPS
+{% for entry in vendors_ranked %}
+  {% unless entry == "" %}
+    {% assign vendor = entry | split: "~" | last %}
+    {% assign slugs = "" %}
+    {% for pair in site.data.templates %}
+      {% assign meta = site.data.templates_override[pair[0]] %}
+      {% unless meta.exclude %}
+        {% assign base = pair[1].vendor | split: " (" | first %}
+        {% if base == vendor %}{% assign slugs = slugs | append: pair[0] | append: "," %}{% endif %}
+      {% endunless %}
+    {% endfor %}
+    {% assign slug_list = slugs | split: "," %}
+<h3 class="tpl-vendor">{{ vendor }}</h3>
+<div class="tpl-grid">
+    {% for slug in slug_list %}
+      {% assign t = site.data.templates[slug] %}
+      {% assign meta = site.data.templates_override[slug] %}
+      {% if t %}
+<h6 class="tpl-anchor" id="{{ slug }}">{{ t.name }}</h6>
+<div class="tpl-card">{{ t.name }}{% if meta.new %} <span class="tpl-new">ny</span>{% endif %}</div>
+      {% endif %}
+    {% endfor %}
+</div>
+  {% endunless %}
+{% endfor %}
 
-# Extens
-Vendor: IST
+---
 
-# Flyt Barnevernvakt 🆕
-Vendor: Visma
-
-# Forum Winsak 🆕
-Vendor: Sikri (tidl. Evry/Ergo)
-
-# Gerica
-Vendor: Tieto
-
-# HK Oppvekst
-Vendor: Vitec HK Data
-
-# iSkole
-Vendor: Barman Hanssen AS
-
-# Kontor 2000
-Vendor: Sikri (tidl. Evry)
-
-# Otto
-Vendor: IST
-
-# Profil 🆕
-Vendor: Visma
-
-# Sakila
-Vendor: Oracle
-
-# SamPro 🆕
-Vendor: Visma
-
-# Sats skole
-Vendor: IST
-
-# Socio 🆕
-Vendor: Tieto
-
-# System X
-Vendor: Hove Medical Systems AS
-
-# VIGO Voksen
-Vendor: Novari IKS
-
-# Visma BVPro
-Vendor: Visma
-
-# Visma Familia
-Vendor: Visma
-
-# Visma Marthe
-Vendor: Visma (tidl. Unique)
-
-# Visma Oskar
-Vendor: Visma (tidl. Unique)
-
-# Visma PPI
-Vendor: Visma (tidl. Unique)
-
-# Visma Velferd
-Vendor: Visma
-
-# WIS Skole
-Vendor: Waade Information System
-
-# Other
-KDRS can help configure a template as part of your membership.\
-We also arrange courses to get you up to speed.\
-To make your own template - see [Guides]({{ 'guides' | relative_url }})\
-Not a member? Any other questions? \
-Please contact [help@kdrs.no](mailto:hjelp@kdrs.no)
+KDRS can help configure a template as part of your membership. We also arrange courses to get you up to speed.
+Not a member? [Contact us](mailto:hjelp@kdrs.no)

@@ -1,0 +1,78 @@
+acos-barnevern:
+  name: Acos Barnevern
+  vendor: DIPS
+acos-sosial:
+  name: Acos Sosial
+  vendor: DIPS
+bvpro:
+  name: BVPro
+  vendor: Visma
+bvv:
+  name: Flyt Barnevernvakt
+  vendor: Visma
+cosdoc:
+  name: CosDoc
+  vendor: DIPS
+demo:
+  name: Demo
+  vendor: IKAMR
+ephorte:
+  name: ephorte
+  vendor: Sikri (tidl. Evry)
+extens:
+  name: Extens
+  vendor: IST
+familia:
+  name: Familia
+  vendor: Visma
+forum-winsak:
+  name: Forum Winsak
+  vendor: Sikri (tidl. Evry/Ergo)
+gerica:
+  name: Gerica
+  vendor: Tieto
+hk-oppvekst:
+  name: HK Oppvekst
+  vendor: Vitec HK Data
+iskole:
+  name: iSkole
+  vendor: Barman Hanssen AS
+k2000:
+  name: Kontor 2000
+  vendor: Sikri (tidl. Evry)
+marthe:
+  name: Marthe
+  vendor: Visma (tidl. Unique)
+oskar:
+  name: Oskar
+  vendor: Visma (tidl. Unique)
+otto:
+  name: Otto
+  vendor: IST
+ppi:
+  name: PPI
+  vendor: Visma
+profil:
+  name: Profil
+  vendor: Visma
+sakila:
+  name: Sakila
+  vendor: Oracle
+sampro:
+  name: SamPro
+  vendor: Visma
+sats:
+  name: Sats skole
+  vendor: IST
+socio:
+  name: Socio
+  vendor: Tieto
+systemx:
+  name: System X
+  vendor: Hove Medical Systems AS
+vigo-voksen:
+  name: VIGO Voksen
+  vendor: Novari IKS
+wis-skole:
+  name: WIS Skole
+  vendor: Waade Information System
