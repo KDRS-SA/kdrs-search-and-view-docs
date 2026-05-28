@@ -73,7 +73,7 @@ Browse the collection below, or [build your own]({{ 'guides' | relative_url }}).
       {% endunless %}
     {% endfor %}
     {% assign slug_list = slugs | split: "," %}
-<h3 class="tpl-vendor">{{ vendor }}</h3>
+<h3 class="tpl-vendor" id="{{ vendor | downcase | replace: ' ', '-' }}">{{ vendor }}</h3>
 <div class="tpl-grid">
     {% for slug in slug_list %}
       {% assign t = site.data.templates[slug] %}
