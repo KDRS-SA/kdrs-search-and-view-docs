@@ -55,6 +55,9 @@ ppi:
 profil:
   name: Profil
   vendor: Visma
+qmplus:
+  name: Qm+
+  vendor: QmPlus
 sakila:
   name: Sakila
   vendor: Oracle
