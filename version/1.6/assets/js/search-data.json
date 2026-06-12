@@ -1149,7 +1149,7 @@
   },"164": {
     "doc": "rows",
     "title": "rows",
-    "content": "Default number of rows is 20. Use this tag to change the default for this view. &lt;table&gt; &lt;rows&gt;1000&lt;/rows&gt; . Use keyword max to get our suggested maximum. (Currently set to 10.000 rows) . &lt;table&gt; &lt;rows&gt;max&lt;/rows&gt; . ",
+    "content": "Default number of rows is 20. Use this tag to change the default for this view. &lt;table&gt; &lt;rows&gt;1000&lt;/rows&gt; . ",
     "url": "/version/1.6/xml/rows/",
     
     "relUrl": "/xml/rows/"
