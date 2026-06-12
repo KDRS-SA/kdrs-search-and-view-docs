@@ -140,6 +140,137 @@
 <div class="wrapper">
 <h1 class="title">Release Notes</h1>
 
+<div class="version">1.7.0 - June 2026</div>
+<div class="new">New</div>
+<ul>  
+  <li>updated config interface for admins and archivers</li>
+  <li>assign users from an archive</li>
+  <li>assign archives from a user</li>
+  <li>validations will show path to file</li>
+  <li>will detect foreignkey without a parent</li>
+  <li>bundler-audit security scanner</li>
+  <li>role archiver can see all users, all companies, and manage any archive</li>
+  <li>archiver can delete a company</li>
+  <li>duplicate tag detection</li>
+  <li>partials for header and footer available in templates</li>
+  <li>support cloning templates from url in template manager</li>
+  <li>downloads of lobs and zips are streamed</li>
+  <li>download checkboxes checked by default</li>
+  <li>statistics grouped by activity type (view/download) with stacked column chart</li>
+  <li>statistics: period selector (1 month / 3 months / 1 year / all)</li>
+  <li> tag: row, value: max - will fetch max rows (currently 10.000)</li>
+</ul>
+
+<div class="fix">Improved or fixed</div>
+<ul>
+  <li>when adding users or creating grants, full name and email is shown instead of company name, sorted</li>
+  <li>statistics view was not scoped to the current archive</li>
+  <li>user catalog update not allowed when LOCAL_LOGIN=false</li>
+  <li>security fix for archiver role</li>
+  <li>must be admin to rename company in cloud</li>
+  <li>mime type detection not running for SolR LOBs</li>
+  <li>loop if the redirected page also had an error</li>
+  <li>print and download button will be translated</li>
+  <li>crash when template manager is loaded multiple times at the same time</li>
+  <li>upgrade from Rails 6.1.7.10 to 8.0.2</li>
+  <li>upgrade from Ruby 3.2.2 to 3.3.7</li>
+  <li>upgrade from Solr 8 to 9</li>
+  <li>upgrade from DBPTK 2 to 3</li>
+</ul>
+<div class="out">Deprecated</div>
+<ul>
+  <li>tag customview is deprecated, use rubyview</li>
+  <li>logo feature removed. We are considering built in logos</li>
+</ul>
+
+<div class="version">1.6.2 - April 2026</div>
+<div class="new">New</div>
+<ul>  
+  <li>add CAS_EXTERNAL_URL .env variable</li>
+</ul>
+</div>
+<div class="fix">Fix</div>
+<ul>  
+  <li>some SolR field types truncated to 1024 characters</li>
+</ul>
+</div>
+
+<div class="version">1.6.1 - November 2025</div>
+<div class="new">New</div>
+<ul>  
+  <li>add dbptk3 migration</li>
+  <li>wsl release</li>
+  <li>SIARD 2.2 support</li>
+</ul>
+</div>
+<div class="fix">Fix</div>
+<ul>  
+  <li>lookup fails on keys indexed as strings</li>
+  <li>template update sometimes fails</li>
+  <li>template permissions</li>
+  <li>library updates</li>
+</ul>
+</div>
+
+<div class="version">1.6.0 - December 2024 </div>
+<div class="new">New</div>
+<ul>  
+  <li>template manager</li>
+  <li>collection of templates at maler.kdrs.no</li>
+  <li>require logon to dbptk</li>
+  <li>external files (files outside SIARD referenced by path)</li>
+  <li>comment archives with rich text (markdown)</li>
+  <li>siard edit tool</li>
+  <li>search on dates</li>
+  <li>language support. norwegian, sweedish, english</li>
+  <li>warn on missing foreignkey</li>
+  <li>log template errors to db</li>
+  <li>parent child tables can have multiple foreignkeys</li>
+  <li>filter in lookup</li>  
+  <li>filter with multiple tags supported</li>  
+  <li>filter - find non value rows with e.g. title:nil</li>  
+  <li>render 'table' can be used multiple times for different tables</li>  
+  <li>render 'my_view' can render views relative to template</li>
+  <li>upgrade solr, dbptk</li>
+  <li>autostart app on reboot</li>
+  <li>allow archives with same id, to explore multiple templates</li>
+</ul>
+<div class="fix">Fix</div>
+<ul>  
+  <li>download could get the wrong document, if search on a renamed field</li>
+  <li>dbptk: fixed problem with indexing some blob types</li>
+  <li>install: will skip docker update if no Internet</li>
+  <li>filter on 'filnavn' did not work if field 'navn' present</li>
+  <li>column named id conflicted with built in id</li>
+  <li>sort did not work for fields with spaces</li>
+  <li>æøå did not display when opening file in browser</li>
+  <li>will not provide url if a primarykey value is missing</li>
+  <li>cache hit will now require a match in solr id</li>
+  <li>missing files warning would show for empty fields</li>
+  <li>archivers can now see access logs</li>
+</ul>
+<div class="template">Views</div>
+<ul>
+  <li>extens fix: incorrect class list if student started class in spring</li>
+  <li>extens fix: new view for class list history</li>
+  <li>extens: listing final classes on top</li>
+  <li>extens: converting utc dates to local time zone</li>
+</ul>
+
+<div class="version">1.5.1 - September 2024</div>
+<div class="fix">Fix</div>
+<ul>  
+  <li>Support download of documents retrieved in Ruby view</li>
+</ul>
+
+<div class="version">1.5.1 - September 2024</div>
+<div class="fix">Fix</div>
+<ul>  
+  <li>Support download of documents retrieved in Ruby view</li>
+  <li>Will skip docker update if no Internet</li>
+  <li>dbptk update: v2.9.1</li>
+</ul>
+
 <div class="version">1.5.0 - April 2024</div>
 <div class="new">New</div>
 <ul>  
@@ -153,6 +284,7 @@
   <li>using relative volume mappings to better support windows</li>
   <li>custom config is now in separate .env file</li>
   <li>documentation updates, and clickable tags</li>
+  <li>print button and download will now follow window size</li>
   <li>xml: tag 'edit' is now used without the 'field' sub tag</li>
   <li>xml: tag 'fields' can now have line breaks</li>
   <li>xml: tag 'sort' now supports sorting on multiple columns</li>
@@ -201,7 +333,7 @@
 <ul>
   <li>RTF can have two different mime types. File extention .rtf will now be applied to both</li>
   <li>Ruby 3.2.2, Rails 6.1.7.6. Other updates.</li>
-  <li>foreignkey can now be used in a lookup without also listing it in the 'fields' tag</li>
+  <li>foreignkey can now be used in a lookup without also listing it in the 'fields' tag</li>  
   <li>Adding "Europe/Oslo" as default time zone. Override in docker-compose.yml. Now use 'my_utc_date.in_time_zone' to get utc dates converted. see sv.kdrs.no/ruby/examples/</li>
 </ul>
 
