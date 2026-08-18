@@ -351,7 +351,7 @@
   },"50": {
     "doc": "1.7 Highlights ★",
     "title": "Deprecated",
-    "content": ". | The customview tag is deprecated. Use rubyview instead. | The logo feature has been removed. We are considering built in logos. | . ",
+    "content": ". | The customview tag is deprecated. Use rubyview instead. | The logo feature has been removed. We are considering built in logos. | Edit mode deprecated | . ",
     "url": "/archive/1.7-highlights/#deprecated",
     
     "relUrl": "/archive/1.7-highlights/#deprecated"
