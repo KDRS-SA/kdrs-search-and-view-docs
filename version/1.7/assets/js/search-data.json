@@ -351,7 +351,7 @@
   },"50": {
     "doc": "1.7 Highlights ★",
     "title": "1.7.1",
-    "content": ". | db: upgrade could stop on db:migrate | db: leftover logo field cleaned up | user grants: archives sorted by name | ui: forms and tables adapt when the window is narrow | ui: less wrapping in grants pages | ui: cosmetic fixes | lib: Puma webserver 6.x to 7.x | lib: local Tomcat CAS server 9.0.117 to 9.0.120 | . ",
+    "content": ". | db: upgrade could stop on db:migrate | user grants: archives sorted by name | ui: forms and tables adapt when the window is narrow | ui: less wrapping in grants pages | ui: cosmetic fixes | lib: Puma webserver 6.x to 7.x | lib: local Tomcat CAS server 9.0.117 to 9.0.120 | . ",
     "url": "/version/1.7/archive/1.7-highlights/#171",
     
     "relUrl": "/archive/1.7-highlights/#171"
