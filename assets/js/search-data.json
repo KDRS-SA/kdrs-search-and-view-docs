@@ -267,7 +267,7 @@
   },"38": {
     "doc": "1.7 Highlights ★",
     "title": "Updated admin interface",
-    "content": "You can now assign users directly from an archive view: . And assign archives directly from a user view: . ",
+    "content": "You can now assign users directly from an archive: . And assign archives directly from a user: . ",
     "url": "/archive/1.7-highlights/#updated-admin-interface",
     
     "relUrl": "/archive/1.7-highlights/#updated-admin-interface"
@@ -309,7 +309,7 @@
   },"44": {
     "doc": "1.7 Highlights ★",
     "title": "Streamed downloads",
-    "content": "Downloads of LOBs and zip files are now streamed, reducing memory usage and improving performance for large files. Download checkboxes are now checked by default. ",
+    "content": "Downloads of LOBs and zip files are now streamed, reducing memory usage and improving performance for large files. ",
     "url": "/archive/1.7-highlights/#streamed-downloads",
     
     "relUrl": "/archive/1.7-highlights/#streamed-downloads"
@@ -372,7 +372,7 @@
   },"53": {
     "doc": "1.7 Highlights ★",
     "title": "1.7 Highlights ★",
-    "content": "Highlights for KDRS Search &amp; View 1.7.0 (June 2026) and 1.7.1 (August 2026). \\ . ",
+    "content": "Highlights for KDRS Search &amp; View 1.7.0 (June 2026) and 1.7.1 (August 2026). ",
     "url": "/archive/1.7-highlights/",
     
     "relUrl": "/archive/1.7-highlights/"
