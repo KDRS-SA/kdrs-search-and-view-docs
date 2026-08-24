@@ -253,7 +253,7 @@
   },"36": {
     "doc": "1.7 Highlights ★",
     "title": "Table of Contents",
-    "content": ". | New features . | Updated admin interface | Tab based navigation | Plus button | Archiver role expanded | Header and footer partials | Clone templates from URL | Streamed downloads | Enhanced statistics | Validation improvements | Security scanning | . | Fixes . | 1.7.1 | 1.7.0 | . | Major upgrades | Deprecated | . ",
+    "content": ". | New features . | Updated admin interface | Tab based navigation | Plus button | Archiver role expanded | Header and footer partials | Clone templates from URL | Streamed downloads | Enhanced statistics | Validation improvements | XML | Security scanning | . | Improved or fixed . | 1.7.1 | 1.7.0 | . | Deprecated | . ",
     "url": "/archive/1.7-highlights/#table-of-contents",
     
     "relUrl": "/archive/1.7-highlights/#table-of-contents"
@@ -329,39 +329,39 @@
     "relUrl": "/archive/1.7-highlights/#validation-improvements"
   },"47": {
     "doc": "1.7 Highlights ★",
+    "title": "XML",
+    "content": ". | Duplicate tag detection | The row tag with value max fetches the maximum number of rows (currently 10.000) | . ",
+    "url": "/archive/1.7-highlights/#xml",
+    
+    "relUrl": "/archive/1.7-highlights/#xml"
+  },"48": {
+    "doc": "1.7 Highlights ★",
     "title": "Security scanning",
     "content": "Added bundler-audit as a security scanner for dependencies. ",
     "url": "/archive/1.7-highlights/#security-scanning",
     
     "relUrl": "/archive/1.7-highlights/#security-scanning"
-  },"48": {
-    "doc": "1.7 Highlights ★",
-    "title": "Fixes",
-    "content": " ",
-    "url": "/archive/1.7-highlights/#fixes",
-    
-    "relUrl": "/archive/1.7-highlights/#fixes"
   },"49": {
     "doc": "1.7 Highlights ★",
+    "title": "Improved or fixed",
+    "content": " ",
+    "url": "/archive/1.7-highlights/#improved-or-fixed",
+    
+    "relUrl": "/archive/1.7-highlights/#improved-or-fixed"
+  },"50": {
+    "doc": "1.7 Highlights ★",
     "title": "1.7.1",
-    "content": ". | db: upgrade could stop on db:migrate | db: leftover logo field cleaned up | user grants: archives sorted by name | ui: forms and tables adapt when the window is narrow | ui: less wrapping in grants pages | ui: user form radio buttons adjusted | ui: shorter footer text to fit narrow windows | ui: login and tools adapt when the window is narrow | ui: new template button moved to the blue button bottom right | ui: wider catalog settings dialog | lib: Puma webserver 6.x to 7.x | lib: local Tomcat CAS server 9.0.117 to 9.0.120 | . ",
+    "content": ". | db: upgrade could stop on db:migrate | db: leftover logo field cleaned up | user grants: archives sorted by name | ui: forms and tables adapt when the window is narrow | ui: less wrapping in grants pages | ui: cosmetic fixes | lib: Puma webserver 6.x to 7.x | lib: local Tomcat CAS server 9.0.117 to 9.0.120 | . ",
     "url": "/archive/1.7-highlights/#171",
     
     "relUrl": "/archive/1.7-highlights/#171"
-  },"50": {
+  },"51": {
     "doc": "1.7 Highlights ★",
     "title": "1.7.0",
-    "content": ". | security: fix for the archiver role | security: renaming a company in the cloud now requires admin | security: user catalog update was allowed when LOCAL_LOGIN=false | statistics: view was not scoped to the current archive | lobs: MIME type detection was not running for Solr LOBs | templates: crash when the template manager was loaded concurrently | user grants: full name and email are shown instead of company name, and the list is sorted | ui: redirect loop when the redirected page also had an error | ui: print and download buttons are now translated | db: MySQL tables are converted from utf8mb3 to utf8mb4 | xml: duplicate tag detection | xml: the row tag with value max will fetch the maximum number of rows (currently 10.000) | . ",
+    "content": ". | user grants: full name and email are shown instead of company name, and the list is sorted | statistics: view was not scoped to the current archive | security: user catalog update not allowed when LOCAL_LOGIN=false | security: fix for the archiver role | security: renaming a company in the cloud now requires admin | lobs: MIME type detection was not running for Solr LOBs | ui: redirect loop when the redirected page also had an error | ui: print and download buttons are now translated | templates: crash when the template manager was loaded concurrently | db: MySQL tables are converted from utf8mb3 to utf8mb4 | lib: Rails 6.1.7.10 to 8.0.2 | lib: Ruby 3.2.2 to 3.3.7 | lib: Solr 8 to 9 | lib: DBPTK 2 to 3 | . ",
     "url": "/archive/1.7-highlights/#170",
     
     "relUrl": "/archive/1.7-highlights/#170"
-  },"51": {
-    "doc": "1.7 Highlights ★",
-    "title": "Major upgrades",
-    "content": "| Component | From | To | . | Rails | 6.1.7.10 | 8.0.2 | . | Ruby | 3.2.2 | 3.3.7 | . | Solr | 8 | 9 | . | DBPTK | 2 | 3 | . ",
-    "url": "/archive/1.7-highlights/#major-upgrades",
-    
-    "relUrl": "/archive/1.7-highlights/#major-upgrades"
   },"52": {
     "doc": "1.7 Highlights ★",
     "title": "Deprecated",
@@ -372,7 +372,7 @@
   },"53": {
     "doc": "1.7 Highlights ★",
     "title": "1.7 Highlights ★",
-    "content": "New and fixed in 1.7.0 (June 2026) and 1.7.1 (August 2026). ",
+    "content": "Highlights for KDRS Search &amp; View 1.7.0 (June 2026) and 1.7.1 (August 2026). \\ . ",
     "url": "/archive/1.7-highlights/",
     
     "relUrl": "/archive/1.7-highlights/"
