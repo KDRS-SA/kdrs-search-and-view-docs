@@ -365,7 +365,7 @@
   },"52": {
     "doc": "1.7 Highlights ★",
     "title": "Known problems",
-    "content": ". | Sorting of nordic characters for users and archives. Will be solved as part of new database platform in another release. | . ",
+    "content": ". | Sorting of nordic characters for users and archives. Will be solved as part of new database platform in another release. | Switching language can jump to another page | . ",
     "url": "/version/1.7/archive/1.7-highlights/#known-problems",
     
     "relUrl": "/archive/1.7-highlights/#known-problems"
