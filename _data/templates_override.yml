@@ -12,6 +12,8 @@ forum-winsak:
   new: true
 profil:
   new: true
+sakila:
+  hidden: true
 sampro:
   new: true
 socio:
