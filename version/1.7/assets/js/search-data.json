@@ -246,7 +246,7 @@
   },"35": {
     "doc": "1.7 Highlights ★",
     "title": "Table of Contents",
-    "content": ". | New features . | Updated admin interface | Tab based navigation | Plus button | Archiver role expanded | Header and footer partials | Clone templates from URL | Streamed downloads | Enhanced statistics | Validation improvements | XML | Security scanning | . | Improved or fixed . | 1.7.1 | 1.7.0 | . | Deprecated | Known problems | . ",
+    "content": ". | New features . | Updated admin interface | Tab based navigation | Plus button | Archiver role expanded | Header and footer partials | Clone templates from URL | Streamed downloads | Enhanced statistics | Validation improvements | XML | Security scanning | . | Improved or fixed . | 1.7.2 | 1.7.1 | 1.7.0 | . | Deprecated | Known problems | . ",
     "url": "/version/1.7/archive/1.7-highlights/#table-of-contents",
     
     "relUrl": "/archive/1.7-highlights/#table-of-contents"
@@ -343,1027 +343,1034 @@
     "relUrl": "/archive/1.7-highlights/#improved-or-fixed"
   },"49": {
     "doc": "1.7 Highlights ★",
+    "title": "1.7.2",
+    "content": ". | ui: message when search with no matches | keycloak: token support | . ",
+    "url": "/version/1.7/archive/1.7-highlights/#172",
+    
+    "relUrl": "/archive/1.7-highlights/#172"
+  },"50": {
+    "doc": "1.7 Highlights ★",
     "title": "1.7.1",
     "content": ". | db: upgrade could stop on db:migrate | wsl: new image with fixed environment variables | user grants: archives sorted by name | ui: forms and tables adapt when the window is narrow | ui: less wrapping in grants pages | ui: cosmetic fixes | lib: Puma webserver 6.x to 7.x | lib: local Tomcat CAS server 9.0.117 to 9.0.120 | . ",
     "url": "/version/1.7/archive/1.7-highlights/#171",
     
     "relUrl": "/archive/1.7-highlights/#171"
-  },"50": {
+  },"51": {
     "doc": "1.7 Highlights ★",
     "title": "1.7.0",
     "content": ". | user grants: full name and email are shown instead of company name, and the list is sorted | statistics: view was not scoped to the current archive | security: user catalog update not allowed when LOCAL_LOGIN=false | security: fix for the archiver role | security: renaming a company in the cloud now requires admin | lobs: MIME type detection was not running for Solr LOBs | ui: redirect loop when the redirected page also had an error | ui: print and download buttons are now translated | templates: crash when the template manager was loaded concurrently | db: MySQL tables are converted from utf8mb3 to utf8mb4 | lib: Rails 6.1.7.10 to 8.0.2 | lib: Ruby 3.2.2 to 3.3.7 | lib: Solr 8 to 9 | lib: DBPTK 2 to 3 | . ",
     "url": "/version/1.7/archive/1.7-highlights/#170",
     
     "relUrl": "/archive/1.7-highlights/#170"
-  },"51": {
+  },"52": {
     "doc": "1.7 Highlights ★",
     "title": "Deprecated",
     "content": ". | The customview tag is deprecated. Use rubyview instead. | The logo feature has been removed. We are considering built in logos. | Edit mode deprecated | . ",
     "url": "/version/1.7/archive/1.7-highlights/#deprecated",
     
     "relUrl": "/archive/1.7-highlights/#deprecated"
-  },"52": {
+  },"53": {
     "doc": "1.7 Highlights ★",
     "title": "Known problems",
     "content": ". | Sorting of nordic characters for users and archives. Will be solved as part of new database platform in another release. | Switching language can jump to another page | For local installs: .env file: Add CAS_EXTERNAL_URL=http://server-dns-name:8181 | . ",
     "url": "/version/1.7/archive/1.7-highlights/#known-problems",
     
     "relUrl": "/archive/1.7-highlights/#known-problems"
-  },"53": {
+  },"54": {
     "doc": "1.7 Highlights ★",
     "title": "1.7 Highlights ★",
     "content": "Highlights for KDRS Search &amp; View 1.7.0 (June 2026) and 1.7.1 (August 2026). ",
     "url": "/version/1.7/archive/1.7-highlights/",
     
     "relUrl": "/archive/1.7-highlights/"
-  },"54": {
+  },"55": {
     "doc": "Guides",
     "title": "Guides",
     "content": "Here you will find guides for KDRS Search &amp; View. ",
     "url": "/version/1.7/guides/",
     
     "relUrl": "/guides/"
-  },"55": {
+  },"56": {
     "doc": "External files",
     "title": "When do you need to use external files?",
     "content": "External files can be useful when you have a column referencing file paths, like the following image: . And also the actual files: . ",
     "url": "/version/1.7/guides/external-files/#when-do-you-need-to-use-external-files",
     
     "relUrl": "/guides/external-files/#when-do-you-need-to-use-external-files"
-  },"56": {
+  },"57": {
     "doc": "External files",
     "title": "How to use external files",
     "content": "To use the external files, you need to have set up a template displaying the paths like this: . You also need three pieces of information to connect the files to the archive: . | The catalog ID, found in the URL: | . The ID is the part after “catalogs/”, so in this case the ID is 42. | The name of the table. This is the name of the table in the database, which can be found in the template: | . &lt;table&gt; &lt;name&gt;objekt&lt;/name&gt; &lt;!-- Name of table --&gt; &lt;title&gt;Files&lt;/title&gt; &lt;fields&gt;innhold, filnavn&lt;/fields&gt; &lt;primarykey&gt;innhold&lt;/primarykey&gt; &lt;/table&gt; . In our case this name is objekt. | The name of the field containing the path. For our case this is filnavn. | . These three pieces are used to create the path where we will put our files, relative to the external folder at /var/kdrs/sv . This means the directory containing our files will be /var/kdrs/sv/external/42/objekt/filnavn . After the catalog ID 42, you can add a comment after an underscore to better organize files. Therefore our path can be: 42_ephorte_dokumenter_svalbard/objekt/filnavn . Create the directory: . Add the files to the directory: . SCP is used in here, but feel free to use any method like FTP or a graphical SCP client . Opening the table in S&amp;V, you will notice that the paths have disappeared, as S&amp;V is detecting that this column is now used for files, and will try to resolve the paths. This fails, and by hovering the mouse over the empty field, you can see it is trying to resolve the path using the original Windows path like this: . As seen, the contents of the filnavn field is appended to the folder we created. Because our directory structure looks like this: . We have to edit the filnavn field such that a path like: . external/42_ephorte_dokumenter_svalbard/objekt/filnavn/C:\\data\\ephorte\\dokumenter\\Vedlikehold av Noark 5.txt . becomes: . external/42_ephorte_dokumenter_svalbard/objekt/filnavn/files/Vedlikehold av Noark 5.txt . We can achieve this by using the &lt;edit&gt; tag to modify the path like this: . &lt;table&gt; &lt;name&gt;objekt&lt;/name&gt; &lt;fields&gt;innhold, filnavn&lt;/fields&gt; &lt;primarykey&gt;innhold&lt;/primarykey&gt; &lt;title&gt;Files&lt;/title&gt; &lt;edit&gt;filnavn.sub(\"C:\\\\data\\\\ephorte\\\\dokumenter\\\\\", \"files/\")&lt;/edit&gt; &lt;!-- Replace windows path with \"files/\" --&gt; &lt;edit&gt;filnavn.gsub(\"\\\\\", \"/\")&lt;/edit&gt; &lt;!-- Replace all backslashes with forwardslashes --&gt; &lt;/table&gt; . We first replace C:\\data\\ephorte\\dokumenter\\ with files using the sub method, then we replace every \\ with / with gsub, as forward-slashes are used for paths in Linux. Note that we have to escape backslashes that are part of a string by writing \\\\ to represent a single \\ . Now all the files will be downloadable! Use the &lt;export&gt; tag to allow download of multiple files at once! . If a file is not found, the open button will not show. In cases like this you can hover the mouse over the empty cell to see which path it is looking for the file at. ",
     "url": "/version/1.7/guides/external-files/#how-to-use-external-files",
     
     "relUrl": "/guides/external-files/#how-to-use-external-files"
-  },"57": {
+  },"58": {
     "doc": "External files",
     "title": "External files",
     "content": "This guide will teach how to use Search &amp; View to access external files, meaning files that are not part of a SIARD. Many systems reference files stored outside a database through paths, and they can be made available by placing them in the external folder. ",
     "url": "/version/1.7/guides/external-files/",
     
     "relUrl": "/guides/external-files/"
-  },"58": {
+  },"59": {
     "doc": "Working with Git",
     "title": "Introduction",
     "content": "When sharing code, Git is an industry standard. It is a tool that keeps a history of all changes, and helps handling conflicts when multiple people are working on the same project. We use a Git server which can be found at maler.kdrs.no to store our templates. This guide will show you how to setup your Git to authenticate with our server, make changes to a template and release an update. ",
     "url": "/version/1.7/guides/git/#introduction",
     
     "relUrl": "/guides/git/#introduction"
-  },"59": {
+  },"60": {
     "doc": "Working with Git",
     "title": "Working with Git",
     "content": " ",
     "url": "/version/1.7/guides/git/",
     
     "relUrl": "/guides/git/"
-  },"60": {
+  },"61": {
     "doc": "Cloning",
     "title": "Cloning",
     "content": "In Git, “clone” means to download a repository (project) to your computer. To clone a template from Git, open VS Code on the machine you want to edit templates on, or connect remotely. A guide for this can be found here. Open the folder /var/kdrs/sv/templates . Login to maler.kdrs.no and open the repository you want to clone. Make sure “SSH” is selected, and click the “Copy URL” button. In VS Code, click View -&gt; Terminal . This will open a terminal at the bottom. Here we can clone the repository with the command: . git clone &lt;copied-repository-ssh-url&gt; . That’s it! Your repository should now be visible in the explorer. You can make commits and push in the “Source Control” tab: . ",
     "url": "/version/1.7/guides/git/cloning/",
     
     "relUrl": "/guides/git/cloning/"
-  },"61": {
+  },"62": {
     "doc": "Editing a template",
     "title": "Editing a template",
     "content": "After configuring your authentication in the previous step, you can edit templates you have permissions for. | Start by opening the template you want to edit in VS Code. File -&gt; Open Folder and enter the path to the template. | Open the Source Control view in the activity bar: . | In the source control view you can view the status for the current repository. It will show the changes you have made to any files, and allow you to “commit” them. In simplified terms, commiting means saving the changes to the repository. Before making any changes, we need to select which “branch” we want to edit. If you look at the image above, you will see the ID “2b195803”. This is the currently selected commit, and represents the selected version. If we check the Search &amp; View template manager, we can see that this ID represents the 1.0.0 version: Often there can be changes to a template that are not yet part of any released version, so we generally want to make sure to start our editing from the latest point of time in the repository, and not the latest released version. The branch used to hold the most recent code is the main branch. To switch to this branch, click the commit ID (which is called the checkout button) from the screenshot above and this dialog should show: Select main to switch branch. | Click “Synchronize Changes” to make sure you have the latest version from the remote git server. | Click the “checkout button” again, but now pick “Create new branch” Give the branch a name and press Enter: If you are making multiple changes, it is a good idea to name the branch after your organization. If you are making a single change, you can give the branch a name representing the change. For example add-diploma-date or fix-date-format. Note: If you already have a branch from before, you can just select that branch instead of making a new one. | Now you are on the latest point of time in the repository, on your own branch, so go ahead and make the changes you want. | After making your changes you will see a list of all the modified files in the source control view. Click the “Stage all changes” button to prepare all your edits to be commited. You can also stage individual files and make multiple commits for unrelated changes. | Type a message describing the changes you made, and click “Commit” . | Now there is only one step left! Your changes are part of your branch, but your branch is still not sent to the Git server. To upload your branch, make sure you are connected to our VPN, and click “Publish branch”. If the branch already exists on the Git server, this button will say “Sync changes”. | To use your changes in your cloud S&amp;V server, log in to your Search &amp; View server and go to Tools -&gt; Templates. Click Update all in the top left corner. | Find the template you changed, and click the gear icon to select an unreleased version. A text box will show. Here you can enter origin/&lt;your-branch&gt; and press enter. Your cloud server is now using your version of the template! . | . ",
     "url": "/version/1.7/guides/git/editing/",
     
     "relUrl": "/guides/git/editing/"
-  },"62": {
+  },"63": {
     "doc": "Authentication setup",
     "title": "Creating SSH keys",
     "content": "To generate the SSH key pair we can use the tool ssh-keygen from OpenSSH. OpenSSH is installed by default in most versions of Windows and Linux. If it is not enabled on your Windows system, see this page. Use the following command, replacing the email with yours. ssh-keygen -t ed25519 -C \"your_email@example.com\" . This dialog should show up: . Press enter to save the key at the default path. You will now be asked to enter a passphrase that you will need to use your private key. Your SSH key pair will now be generated: . Your key pair will be stored at the following paths: . Windows: C:\\Users\\&lt;username&gt;\\.ssh\\ . Unix: /home/&lt;username&gt;/.ssh/ . The file id_ed25519 is your private key, and should stay on your local machine(s) and never be shared with anyone. The file id_ed25519.pub is your public key, and should be shared with services you want to authenticate with. ",
     "url": "/version/1.7/guides/git/setup/#creating-ssh-keys",
     
     "relUrl": "/guides/git/setup/#creating-ssh-keys"
-  },"63": {
+  },"64": {
     "doc": "Authentication setup",
     "title": "Adding your public key to Git",
     "content": ". | Log in to maler.kdrs.no and click your profile picture in the top right corner . | Click settings . | Click SSH / GPG keys . | Click Add key in the “Manage SSH keys” panel . | Enter a title of your choice. Open your SSH public key (id_ed25519.pub) in a text editor and copy its contents to the content field. | Click “Add SSH key”. | . You are now able to authenticate with Git over SSH, on any machine where you private key (id_ed25519) is in your .ssh folder. ",
     "url": "/version/1.7/guides/git/setup/#adding-your-public-key-to-git",
     
     "relUrl": "/guides/git/setup/#adding-your-public-key-to-git"
-  },"64": {
+  },"65": {
     "doc": "Authentication setup",
     "title": "Adding your contact information to git",
     "content": "To make changes in Git, you need to add your name and email to your git configuration so that other people will can see who is the author of your commits. Do this with the following two commands: . git config --global user.name \"Arild Arkivarildsen\" . git config --global user.email \"arild@detbestearkivet.no\" . ",
     "url": "/version/1.7/guides/git/setup/#adding-your-contact-information-to-git",
     
     "relUrl": "/guides/git/setup/#adding-your-contact-information-to-git"
-  },"65": {
+  },"66": {
     "doc": "Authentication setup",
     "title": "Adding your private key to another machine",
     "content": "If you need to connect to Git from a different machine, or a virtual machine, you need to transfer your SSH private key to that machine. Copy your id_ed25519 to the following directory: . Windows: C:\\Users\\&lt;username&gt;\\.ssh\\ . Unix: /home/&lt;username&gt;/.ssh/ . On Unix the SSH private key needs to not be readable by other users. This can be done with the following commands: . chmod 600 ~/.ssh/id_ed25519 . ",
     "url": "/version/1.7/guides/git/setup/#adding-your-private-key-to-another-machine",
     
     "relUrl": "/guides/git/setup/#adding-your-private-key-to-another-machine"
-  },"66": {
+  },"67": {
     "doc": "Authentication setup",
     "title": "Authentication setup",
     "content": "When working with Git, authentication is typically done through SSH. This means you need a pair of SSH keys (public and private). The public key is to give to any service you want to authenticate to (e.g. GitHub) and the private key stays on your computer and is used by your SSH program to prove that you are the owner of the corresponding public key. If you already have a SSH key, you can skip to “Adding your public key to Git” . ",
     "url": "/version/1.7/guides/git/setup/",
     
     "relUrl": "/guides/git/setup/"
-  },"67": {
+  },"68": {
     "doc": "Make a template",
     "title": "Introduction",
     "content": "This guide is intended to give some familiarity with making XML templates for displaying data from SIARD-files in KDRS Search &amp; View. It will not contain a full walkthrough of every feature, but is a good place to get started. ",
     "url": "/version/1.7/guides/make-a-template/#introduction",
     
     "relUrl": "/guides/make-a-template/#introduction"
-  },"68": {
+  },"69": {
     "doc": "Make a template",
     "title": "Make a template",
     "content": " ",
     "url": "/version/1.7/guides/make-a-template/",
     
     "relUrl": "/guides/make-a-template/"
-  },"69": {
+  },"70": {
     "doc": "Part 0: Editing environment",
     "title": "Installing VS Code",
     "content": ". | First we need Visual Studio Code, a text editor from code by microsoft. You can download VS Code here. | After installing VS Code, open VS Code, then open the following links in a browser and click “Install”. They will then open in the VS Code extension viewer where you have to click “Install” again (these extensions may be included in VS Code, if you already have them installed you will se an “Uninstall” button instead): . | Remote - SSH - allows for connecting to a remote machine via SSH and editing files directly in VS Code on your local machine. | Remote - SSH: Editing Configuration Files - let’s you easily edit SSH config files in VS Code. Note: Your browser may ask you if you want to open a link in VS Code. Accept this prompt | . | . ",
     "url": "/version/1.7/guides/make-a-template/part-0-editing-environment/#installing-vs-code",
     
     "relUrl": "/guides/make-a-template/part-0-editing-environment/#installing-vs-code"
-  },"70": {
+  },"71": {
     "doc": "Part 0: Editing environment",
     "title": "Connecting via SSH in VS Code",
     "content": ". | Click the remote button in the lower left corner of the screen. | Click “Connect to host”. | Click “Add new SSH Host”. | Enter the username and address of the server running KDRS Search &amp; View. For SSH this is formatted as &lt;username&gt;@&lt;address&gt;. If you are unsure what to enter here, ask whoever is responsible for managing the server. You will also need the password for the user. | Select where you want to store the configuration file for SSH. The top option, in your user folder, is most commonly used. | Now the server should be added. Open the “Remote Window” again. | Click “Connect to host”. | Click the SSH host you just added. | Choose Linux if prompted. | If informed about the server’s fingerprint, click continue. This message appears the first time connecting to a server via SSH. | Enter the password for the account you connected to. TIP: You can create an SSH certificate and add it on the Linux server to allow for easier SSH login without a password. This guide demonstrates one method of doing this. | . ",
     "url": "/version/1.7/guides/make-a-template/part-0-editing-environment/#connecting-via-ssh-in-vs-code",
     
     "relUrl": "/guides/make-a-template/part-0-editing-environment/#connecting-via-ssh-in-vs-code"
-  },"71": {
+  },"72": {
     "doc": "Part 0: Editing environment",
     "title": "Editing files on the remote machine",
     "content": ". | Click the “Explorer” button in the sidebar and select “Open Folder”. | Enter the path /var/kdrs/sv/templates/ and click “OK”. This is the path of the folder where XML templates are stored. | Now we recommend adding the Red Hat XML extension. This should be installed in the VS Code window that is connected to a remote server to make sure it gets activated for remote use. Some benefits of this extension are: . | Warning messages if the XML is invalid | Automatic formatting | Automatic closing of tags (if you write &lt;hello&gt;, you will automatically get &lt;/hello&gt;) | And more… | . | . Note: You can find more extensions to use if you want to, but be careful (especially if working with sensitive data). Just like browser extensions, they can contain malicious code. All extensions recommended in this guide are provided by Microsoft and Red Hat, both considered to be highly reputable. | You are now ready to edit files. On the left side of the screen you can open the “Explorer” sidebar that let’s you navigate the templates folder we opened and create files there. If you select a file in the explorer, it will open an editor window in the center. | . ",
     "url": "/version/1.7/guides/make-a-template/part-0-editing-environment/#editing-files-on-the-remote-machine",
     
     "relUrl": "/guides/make-a-template/part-0-editing-environment/#editing-files-on-the-remote-machine"
-  },"72": {
+  },"73": {
     "doc": "Part 0: Editing environment",
     "title": "Part 0: Editing environment",
     "content": "This part of the guide will walk through some recommended options for editing XML template files on a Linux server. There are many ways of doing this, but our method allows for seamless editing and saving of files on a remote server, in a modern editor with good support for XML files. However, if you already have a workflow for this that you are comfortable with using, feel free to stick to that. ",
     "url": "/version/1.7/guides/make-a-template/part-0-editing-environment/",
     
     "relUrl": "/guides/make-a-template/part-0-editing-environment/"
-  },"73": {
+  },"74": {
     "doc": "Part 1: Loading SIARD files",
     "title": "Part 1: Loading SIARD files",
     "content": "Uploading of SIARD files is done in DBPTK (Database Preservation Toolkit), which interprets SIARD files and loads the data into a modern database system that can be used by KDRS Search &amp; View. | Access DBPTK by using your browser and navigating to the web address KDRS S&amp;V runs on followed by :8080. For example, as our server has the address innsyn.detbestearkivet.no we would have to navigate to innsyn.detbestearkivet.no:8080. Note: The default port is 8080, but it is possible this has been changed for your installation. | Click “LOAD SIARD FILE” . | Click “CHOOSE FILES…” and select the sakila.siard file that you downloaded in the prerequisites. | Wait until the status indicator shows a green checkmark and click “OPEN SIARD”. | Now our file is uploaded, but we still have to make DBPTK index the data for KDRS S&amp;V to access it. This is done by clicking “BROWSE” in the database overview. NOTE: This step takes a long time. You can proceed to part 2 of the guide while waiting, as we do not need the indexing to be finished until part 3. | When the indexing is finished, you should get the popup “SIARD data successfully imported”. You can also verify that the processing was successful by ensuring the “Status” in the database overview is “Ready”. | . ",
     "url": "/version/1.7/guides/make-a-template/part-1-loading-siard-files/",
     
     "relUrl": "/guides/make-a-template/part-1-loading-siard-files/"
-  },"74": {
+  },"75": {
     "doc": "Part 2: Configuring KDRS S&V",
     "title": "Part 2: Configuring KDRS S&V",
     "content": "Now we will log into KDRS S&amp;V and setup a company (archive) and an account to use. | By default only the admin account exists. Log into the admin account by clicking OK after entering the default credentials: E-mail: admin@kdrs.no Password: admin . | IMPORTANT: Now we have to change the admin password from the default one to a secret, secure one. Click “Admin” in the top right to open the navigation menu and navigate to “Brukere”. | Click the edit icon for the admin user. | Enter a good password and click “OK” (minimum is 14 characters). | Now we need to add our archive. Open the navigation menu and navigate to “Firma”. | Click “Nytt firma”. | In the “Navn” field, enter the name of your archive, then click OK. | Now we can set up an account for an archivist. Archivists have permissions to create new catalogs. Navigate to “Brukere” in the navigation meny and click “Ny bruker”. | Fill out all the fields, select the archive you made for “Firma” and select the checkbox for “Arkivar”, before clicking “OK” to create the new account. | Log out of the admin account and log in to the new account you created. | . We are now ready to create a new template and display some data! . ",
     "url": "/version/1.7/guides/make-a-template/part-2-configuring-kdrs-innsyn/",
     
     "relUrl": "/guides/make-a-template/part-2-configuring-kdrs-innsyn/"
-  },"75": {
+  },"76": {
     "doc": "Part 3: Creating our first template",
     "title": "Part 3: Creating our first template",
     "content": "Now we are ready to create our first XML template and display data from the Sakila sample SIARD-file. XML templates are stored in the templates folder where KDRS S&amp;V is stored. The full path would generally be /var/kdrs/sv/templates. | Within the templates folder, create a new XML file named innsyn_tutorial.xml. This file can be placed in either the root of or in any subdirectory of the templates folder. Only the name of the file matters. | Now we will fill the file with the bare minium to make it display something in KDRS S&amp;V: . | . &lt;views&gt; &lt;view&gt; &lt;name&gt;Den beste visningen&lt;/name&gt; &lt;/view&gt; &lt;/views&gt; . You can choose whatever you want for the name This creates a new “View” for our database, which is a collection of tables. We will add the tables later. | Now we need the UUID of our database. It is found in the top left of the database overview in DBPTK. Copy this ID for the next step (without the enclosing parentheses). | Now go to the KDRS S&amp;V frontpage. Enter edit mode by choosing “Rediger” in the navigation menu, and click “Nytt innsyn” to add our new template and link it to the database. | Here we need to enter some information for the new database. The field “Solr ID” should contain the UUID we found in step 3. For the 2 first fields, you are free to enter a title and description of your choosing, but it is required that one of these two fields contain the filename of our XML template. Because our XML file is innsyn_tutorial.xml, we have added that name to the description. After completion, click “OK”. | Now you should see an overview of the new database, showing a link to the view we defined in the XML template. Clicking the link at this point will cause an error, as we have not yet created any tables for it. | . We are now ready to start editing our XML template further to actually extract and present some data from our SIARD-file. ",
     "url": "/version/1.7/guides/make-a-template/part-3-creating-our-first-template/",
     
     "relUrl": "/guides/make-a-template/part-3-creating-our-first-template/"
-  },"76": {
+  },"77": {
     "doc": "Part 4: Displaying some data",
     "title": "Part 4: Displaying some data",
     "content": "Now we will actually show some information stored in the database. The following image shows a schema of all the tables in our database: . The database schema is from DBPTK, and is found by clicking “BROWSE” in the database overview The table film looks interesting, so we will click that to view it: Our first task will be to show the title and description of every film in a table. | To do this, we have to start by defining a new table for our view. We do this by adding a &lt;table&gt; tag in our XML template: | . &lt;views&gt; &lt;view&gt; &lt;name&gt;Den beste visningen&lt;/name&gt; &lt;table&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . | Within the &lt;table&gt; tag, there are 4 required tags we need to specify. These are &lt;name&gt;, &lt;title&gt;, &lt;primarykey&gt; and &lt;fields&gt;. The purpose of these tags is as follows: | . | XML tag | Value | . | &lt;name&gt; | The name of the table in the database we want data from. As we are getting data from the table film, the value will be film | . | &lt;title&gt; | The name that will be displayed above our table. This can be set to anything you want. | . | &lt;primarykey&gt; | A primary key is a column that has a unique value for every row in a table. For the film table the unique column is film_id, so we have to set the primary key to film_id | . | &lt;fields&gt; | This is a list of columns we want to show data from. The list is comma-separated, so because we want to show data from the columns title and description, we have to set fields to title, description | . | Update the XML template file with the required tags: | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;Den beste tabellen&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title, description&lt;/fields&gt; &lt;/table&gt; ... Some parts of the XML file that were not changed in this step have been omitted. | If we open our view now, it should show a table with columns for titles and descriptions. | . Now we have a fully working table, and are ready to learn some more advanced techniques! . ",
     "url": "/version/1.7/guides/make-a-template/part-4-displaying-some-data/",
     
     "relUrl": "/guides/make-a-template/part-4-displaying-some-data/"
-  },"77": {
+  },"78": {
     "doc": "Part 5: Editing our table",
     "title": "Part 5: Editing our table",
     "content": "Our table looks pretty good already, but let’s say we want to make it even better by changing the column headers, and having the titles not be capitalized. | To change the column headers, we need to specify the new names within the &lt;fields&gt; tag. We do that by adding as (name) after the column name, where, (name) can be whichever header name we want. Modify the XML-template to include some names of your choosing. | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;Den beste tabellen&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse&lt;/fields&gt; &lt;/table&gt; ... | Now we will make the title fields look better, by improving their capitalization. We can do this by using the &lt;edit&gt; tag. It allows us to run Ruby methods on the fields before displaying them. A very useful method for our usecase is titleize. This method makes text look like a title, by capitalizing the first letter of every word. To use the &lt;edit&gt; tag we write on the format fieldname.method_to_perform within it. | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;Den beste tabellen&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;/table&gt; ... Note that we had to use the name we gave in step 1 to perform the edit. This is because the as keyword renames the variable itself. | That’s it! Now our table looks even better! | . ",
     "url": "/version/1.7/guides/make-a-template/part-5-editing-our-table/",
     
     "relUrl": "/guides/make-a-template/part-5-editing-our-table/"
-  },"78": {
+  },"79": {
     "doc": "Part 6: Using data from other tables",
     "title": "Part 6: Using data from other tables",
     "content": "Now it’s time to get a bit more advanced, by including data from another table in the database. | Within the table film there is a column language_id, which we will add to our &lt;fields&gt; tag. | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;Den beste tabellen&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse, language_id&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;/table&gt; ... Now our table looks like this: . | As you can see, the language_id column has been added, but it is unfortunatly not very user-friendly in it’s current state, as the language is only represented by a number. This is because there is another table in our database: language, which correlates the IDs with a language. | To make our table use the name of the language instead of the ID, we need to use the &lt;lookup&gt; tag. This tag allows us to use a field as a key in another table, to replace the field itself with values from that second table. The &lt;lookup&gt; tag requires 4 child tags within it, which are as follows: . | . | XML tag | Usage | . | &lt;table&gt; | The name of the table we want to lookup data within. In our case this will be language. | . | &lt;primarykey&gt; | The name of the column from our original table (film) that we will match against a key in the new table (language). In our case it is language_id | . | &lt;foreignkey&gt; | The name of the column in the table we are performing the lookup within that will be matched against the &lt;primarykey&gt;. This is also language_id, as the columns have the same names in both the film and language tables. | . | &lt;fields&gt; | The names of the columns we want to retrieve data from. We only want the name of the language, which is stored in the name column | . | That means we need to make the following addition to our XML template: | . &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;Den beste tabellen&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse, language_id&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;lookup&gt; &lt;table&gt;language&lt;/table&gt; &lt;primarykey&gt;language_id&lt;/primarykey&gt; &lt;foreignkey&gt;language_id&lt;/foreignkey&gt; &lt;fields&gt;name as språk&lt;/fields&gt; &lt;!-- We can rename the field using the \"as\" keyword we learned in part 5 --&gt; &lt;/lookup&gt; &lt;/table&gt; . | Now our table includes the language: | . ",
     "url": "/version/1.7/guides/make-a-template/part-6-using-data-from-other-tables/",
     
     "relUrl": "/guides/make-a-template/part-6-using-data-from-other-tables/"
-  },"79": {
+  },"80": {
     "doc": "Part 7: Creating child tables",
     "title": "Part 7: Creating child tables",
     "content": "Now we have a list of films, but lets expand it a bit. It could be useful to show which actors played in a film. By using a child table we can let the user click on a film in our first table, which will then open a list of actors that played in that movie. | Let’s check how the tables of films and actors are related. This can be done in the DBPTK schema. We see that film_actor connects the film and actor table. | We can see that the film_actor table contains two columns linking actors with films. This is perfect for our child table, because we can click an entry to use one of it’s fields as a &lt;primarykey&gt;. In our case it will be the film_id of the selected film. We will then display the child table film_actor which contains only the rows where the specified primary key matches a &lt;foreignkey&gt;. The foreign key will also be film_id, as film_actor has that column. | Lets define a new child table in our XML template. This will be done similarily to the first table, but we need 2 extra tags: &lt;parent&gt;, which is the name of the parent table, and as mentioned &lt;foreignkey&gt;, which will be matched against the primary key of the parent table. | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; [...] &lt;!-- Part of our first table omitted to keep the text shorter --&gt; &lt;/table&gt; &lt;table&gt; &lt;!-- Our new child table --&gt; &lt;name&gt;film_actor&lt;/name&gt; &lt;title&gt;Skuespillerliste&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;actor_id&lt;/fields&gt; &lt;parent&gt;film&lt;/parent&gt; &lt;foreignkey&gt;film_id&lt;/foreignkey&gt; &lt;/table&gt; ... Our child table now looks like this: . | The child actor table is still very barebones, so let’s improve it by using some previously learned techniques to replace the IDs with names using &lt;lookup&gt; and change the column header using as. | ... &lt;table&gt; &lt;name&gt;film_actor&lt;/name&gt; &lt;title&gt;Skuespillerliste&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;actor_id&lt;/fields&gt; &lt;parent&gt;film&lt;/parent&gt; &lt;foreignkey&gt;film_id&lt;/foreignkey&gt; &lt;lookup&gt; &lt;table&gt;actor&lt;/table&gt; &lt;primarykey&gt;actor_id&lt;/primarykey&gt; &lt;foreignkey&gt;actor_id&lt;/foreignkey&gt; &lt;fields&gt;first_name as fornavn, last_name as etternavn&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; ... | As a last step it is usually good for child tables like this to have a &lt;header&gt; tag that shows which element the child table is a list for, in our case which film. Because we don’t have access to film titles within the film_actor table, we need to use the film_id to perform a lookup on the film table and retrieve the title. | ... &lt;table&gt; &lt;name&gt;film_actor&lt;/name&gt; &lt;title&gt;Skuespillerliste&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;actor_id&lt;/fields&gt; &lt;parent&gt;film&lt;/parent&gt; &lt;foreignkey&gt;film_id&lt;/foreignkey&gt; &lt;header&gt;title as tittel&lt;/header&gt; &lt;!-- The title is retrieved from the second lookup below and renamed. --&gt; &lt;lookup&gt; &lt;table&gt;actor&lt;/table&gt; &lt;primarykey&gt;actor_id&lt;/primarykey&gt; &lt;foreignkey&gt;actor_id&lt;/foreignkey&gt; &lt;fields&gt;first_name as fornavn, last_name as etternavn&lt;/fields&gt; &lt;/lookup&gt; &lt;lookup&gt; &lt;!-- This lookup gets the title from the table film using the film_id --&gt; &lt;table&gt;film&lt;/table&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;foreignkey&gt;film_id&lt;/foreignkey&gt; &lt;fields&gt;title&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; . Our child table should now look like this: . ",
     "url": "/version/1.7/guides/make-a-template/part-7-creating-child-tables/",
     
     "relUrl": "/guides/make-a-template/part-7-creating-child-tables/"
-  },"80": {
+  },"81": {
     "doc": "Part 8: Tabs and filters",
     "title": "Part 8: Tabs and filters",
     "content": "The last feature we will add to our template is a new tab that applies a filter. Lets create a new tab that contains all the short films, meaning one hour or less. | We start by adding a &lt;parent&gt; tag to our film table. This tag can contain any name that is not the name of another table, but it needs to be the same across all tables that we want grouped by tabs. After this we duplicate the whole table, but change the &lt;title&gt; of the second table to make them differentiable. | ... &lt;view&gt; &lt;name&gt;Den beste visningen&lt;/name&gt; &lt;table&gt; &lt;!-- Our original table showing all films --&gt; &lt;name&gt;film&lt;/name&gt; &lt;parent&gt;top&lt;/parent&gt; &lt;!-- \"top\" is commonly used to group tables at the top of the hierarchy (no parent tables) --&gt; &lt;title&gt;Alle filmer&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse, language_id&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;lookup&gt; &lt;table&gt;language&lt;/table&gt; &lt;primarykey&gt;language_id&lt;/primarykey&gt; &lt;foreignkey&gt;language_id&lt;/foreignkey&gt; &lt;fields&gt;name as språk&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; &lt;table&gt; &lt;!-- The new table that will show short films --&gt; &lt;name&gt;film&lt;/name&gt; &lt;parent&gt;top&lt;/parent&gt; &lt;title&gt;Korte filmer&lt;/title&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse, language_id&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;lookup&gt; &lt;table&gt;language&lt;/table&gt; &lt;primarykey&gt;language_id&lt;/primarykey&gt; &lt;foreignkey&gt;language_id&lt;/foreignkey&gt; &lt;fields&gt;name as språk&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; ... Now we can see a new tab appear, which will also list every film. | Now we need to add a &lt;filter&gt; tag to our new table. This tag uses SolR queries, and we can use a Range Search to filter by the films which have a length less than or equal to 60. The syntax for this is length: [* TO 60]. Add this within a &lt;filter&gt; tag in the new table. | ... &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;parent&gt;top&lt;/parent&gt; &lt;title&gt;Korte filmer&lt;/title&gt; &lt;filter&gt;length: [* TO 60]&lt;/filter&gt; &lt;!-- SolR filter here --&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;fields&gt;title as tittel, description as beskrivelse, language_id&lt;/fields&gt; &lt;edit&gt;tittel.titleize&lt;/edit&gt; &lt;lookup&gt; &lt;table&gt;language&lt;/table&gt; &lt;primarykey&gt;language_id&lt;/primarykey&gt; &lt;foreignkey&gt;language_id&lt;/foreignkey&gt; &lt;fields&gt;name as språk&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; ... Our new table now only contains films that are 60 minutes or less! . ",
     "url": "/version/1.7/guides/make-a-template/part-8-tabs-and-filters/",
     
     "relUrl": "/guides/make-a-template/part-8-tabs-and-filters/"
-  },"81": {
+  },"82": {
     "doc": "Prerequisites",
     "title": "Prerequisites",
     "content": "Before starting this guide, you will need the following: . | Access to a server running KDRS Search &amp; View. | KDRS S&amp;V website access. | SSH/FTP access (or another method to edit files on the Linux server). | . | The example Sakila SIARD-dataset. In this guide we will be making templates for this dataset. | . Download sakila.siard . Copyright Notice: The Sakila SIARD-file is a derivative of MySQL’s Sakila SQL sample database, and therefore subject to the New BSD license. ",
     "url": "/version/1.7/guides/make-a-template/prerequisites/",
     
     "relUrl": "/guides/make-a-template/prerequisites/"
-  },"82": {
+  },"83": {
     "doc": "User Guide",
     "title": "User Guide",
     "content": "Guide for using KDRS Search &amp; View for caseworkers . ",
     "url": "/version/1.7/guides/user-guide/",
     
     "relUrl": "/guides/user-guide/"
-  },"83": {
+  },"84": {
     "doc": "User Guide",
     "title": "Table of Contents",
     "content": ". | String Search | Date Search | . ",
     "url": "/version/1.7/guides/user-guide/#table-of-contents",
     
     "relUrl": "/guides/user-guide/#table-of-contents"
-  },"84": {
+  },"85": {
     "doc": "User Guide",
     "title": "String Search",
     "content": ". | ann* → Finds all words that starts with ann | . ",
     "url": "/version/1.7/guides/user-guide/#string-search",
     
     "relUrl": "/guides/user-guide/#string-search"
-  },"85": {
+  },"86": {
     "doc": "User Guide",
     "title": "Date Search",
     "content": "Examples: . | Date: 2005.01.01 → Finds everything from January 1, 2005 | Year: 2005 → Finds everything from 2005 | Month: 2005.01 → Finds everything in January 2005 | Range: 2005-2006 → Finds everything from 2005 and all of 2006 | Open Range: 2005- → Finds everything from 2005 onwards | . Variations . You can choose what symbol to use: . - or / You can choose order dd.mm.yyyy or yyyy.mm.dd Example of variations: . | 1/1-2005 January 1, 2005 | 1.1.2005 day.month.year | 01.01.2005 day.month.year | . ",
     "url": "/version/1.7/guides/user-guide/#date-search",
     
     "relUrl": "/guides/user-guide/#date-search"
-  },"86": {
+  },"87": {
     "doc": "Home",
     "title": "KDRS Search &amp; View",
     "content": "KDRS Search &amp; View brings archives to the web. The system can be configured by using XML, and Ruby when needed. ",
     "url": "/version/1.7/#kdrs-search--view",
     
     "relUrl": "/#kdrs-search--view"
-  },"87": {
+  },"88": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
     "url": "/version/1.7/",
     
     "relUrl": "/"
-  },"88": {
+  },"89": {
     "doc": "Operations",
     "title": "Operations",
     "content": "Configuration and administration guides for running KDRS Search &amp; View. ",
     "url": "/version/1.7/operations/",
     
     "relUrl": "/operations/"
-  },"89": {
+  },"90": {
     "doc": "SAML Authentication",
     "title": "SAML Authentication",
     "content": "Configure single sign-on (SSO) using SAML against your organization’s identity provider. | Overview | Configuration . | Variables | Example | Proxy | . | Required IdP attributes | Apply Configuration | . ",
     "url": "/version/1.7/operations/saml/",
     
     "relUrl": "/operations/saml/"
-  },"90": {
+  },"91": {
     "doc": "SAML Authentication",
     "title": "Overview",
     "content": "When SAML login is enabled, users are redirected to your identity provider (IdP) — such as Active Directory Federation Services or Entra ID. The IdP sends back a signed SAML response with the user’s attributes and group memberships, which KDRS Search &amp; View uses to assign a role. ",
     "url": "/version/1.7/operations/saml/#overview",
     
     "relUrl": "/operations/saml/#overview"
-  },"91": {
+  },"92": {
     "doc": "SAML Authentication",
     "title": "Configuration",
     "content": "Edit this file: /var/kdrs/sv/.env . TIP For security reasons, local login will be disabled when SAML_LOGIN=true It’s still possible to force LOCAL_LOGIN=true, but it is discouraged. Variables . | Variable | Description | . | SAML_LOGIN | Set to true | . | IDP_SSO_SERVICE_URL | The IdP’s SSO endpoint | . | IDP_CERT | The IdP’s public signing certificate in PEM format | . | ASSERTION_CONSUMER_SERVICE_URL | KDRS Search &amp; View URL /saml/consume. Tell your IdP to redirect back to this address | . | SP_ENTITY_ID | KDRS Search &amp; View URL | . | ADMIN_GROUP | regexp for admin group name - full access | . | ARCHIVER_GROUP | regexp for archiver group name - full access with some exceptions | . | CASEWORKER_GROUP | regexp for caseworker group name - no access, unless specifically assigned in app | . Example . SAML_LOGIN=true IDP_SSO_SERVICE_URL=https://idp.example.no/simplesaml/saml2/idp/SSOService.php IDP_CERT=-----BEGIN CERTIFICATE----- MIIDCzCCAfOgAwIBAgIJ... -----END CERTIFICATE----- ASSERTION_CONSUMER_SERVICE_URL=https://sv.example.no/saml/consume SP_ENTITY_ID=https://sv.example.no ADMIN_GROUP=innsyn-admin ARCHIVER_GROUP=innsyn-arkivar CASEWORKER_GROUP=innsyn-saksbehandler . You may have to specify port number, depending on the proxy config . Proxy . If you use a proxy in front of the app (recommended), the address is https:// for encrypted communication. If you don’t have a proxy, use http:// This can work for internal systems, but external communication should be encrypted. Often the proxy takes care of the port number (default: 3000) so it’s not needed in the config. TIP You can also adjust the APP_PORT in .env if needed. ",
     "url": "/version/1.7/operations/saml/#configuration",
     
     "relUrl": "/operations/saml/#configuration"
-  },"92": {
+  },"93": {
     "doc": "SAML Authentication",
     "title": "Required IdP attributes",
     "content": "The IdP must release the following attributes: . | Attribute | Description | . | mail | Email address | . | givenName | First name | . | sn | Last name | . | company | Organization name | . | mobile | Phone number | . | memberOf | Group memberships — used for role assignment | . ",
     "url": "/version/1.7/operations/saml/#required-idp-attributes",
     
     "relUrl": "/operations/saml/#required-idp-attributes"
-  },"93": {
+  },"94": {
     "doc": "SAML Authentication",
     "title": "Apply Configuration",
     "content": "Restart the application to apply the config . cd /var/kdrs/sv sudo docker restart sv-app . Go to http://server:3000 and you should see your IdP login page . ",
     "url": "/version/1.7/operations/saml/#apply-configuration",
     
     "relUrl": "/operations/saml/#apply-configuration"
-  },"94": {
+  },"95": {
     "doc": "Ruby View",
     "title": "Ruby View",
     "content": "KDRS Search &amp; View can be extended for advanced data manipulation and presentation. Some basic XML config is need to activate the view. We encourage the use of XML where possible, and then use Ruby views when needed. This allows for readability in the community. ",
     "url": "/version/1.7/ruby/",
     
     "relUrl": "/ruby/"
-  },"95": {
+  },"96": {
     "doc": "Ruby View",
     "title": "Table of Contents",
     "content": ". | Ruby View | Make a new file for the view | Reference the view from xml | Minimum template | Data | Columns | Html | Ruby | CSS | . ",
     "url": "/version/1.7/ruby/#table-of-contents",
     
     "relUrl": "/ruby/#table-of-contents"
-  },"96": {
+  },"97": {
     "doc": "Ruby View",
     "title": "Make a new file for the view",
     "content": "In the templates/your_system/ directory on your host, create a new file for your view. It must start with underscore. Use lowercase. The html.erb extention will make sure that the Ruby server will process the file first, then the html engine. /var/kdrs/sv/templates/school_system/_diploma.html.erb . ",
     "url": "/version/1.7/ruby/#make-a-new-file-for-the-view",
     
     "relUrl": "/ruby/#make-a-new-file-for-the-view"
-  },"97": {
+  },"98": {
     "doc": "Ruby View",
     "title": "Reference the view from xml",
     "content": "The program flow will be redirected to this view. You will be in control of the presentation. &lt;table&gt; &lt;rubyview&gt;diploma&lt;/rubyview&gt; . ",
     "url": "/version/1.7/ruby/#reference-the-view-from-xml",
     
     "relUrl": "/ruby/#reference-the-view-from-xml"
-  },"98": {
+  },"99": {
     "doc": "Ruby View",
     "title": "Minimum template",
     "content": "&lt;!-- DATA PREPARATION --&gt; &lt;% # Your data will be in the @docs variable # Adjust your data as needed before presentation %&gt; &lt;!-- DATA PRESENTATION --&gt; &lt;%= render 'table' %&gt; . Note Use ‘=’ to output Ruby on screen` . This view template will generate the same view as the default template. The difference is that you can manipulate the data as needed, and change the presentation with new styling, titles, extra text, tables etc. Maybe you want some different layout on print. This and more you can change from here. ",
     "url": "/version/1.7/ruby/#minimum-template",
     
     "relUrl": "/ruby/#minimum-template"
-  },"99": {
+  },"100": {
     "doc": "Ruby View",
     "title": "Data",
     "content": "The data from xml will be available to the view in the @docs variable. If you need more data from other tables, you can fetch those here. See the examples for how this is done. ",
     "url": "/version/1.7/ruby/#data",
     
     "relUrl": "/ruby/#data"
-  },"100": {
+  },"101": {
     "doc": "Ruby View",
     "title": "Columns",
     "content": "Select the fields you want to show as columns in the view . @show_fields = [\"first name\", \"last name\"] @show_fields &lt;&lt; \"land\" #alternative syntax . ",
     "url": "/version/1.7/ruby/#columns",
     
     "relUrl": "/ruby/#columns"
-  },"101": {
+  },"102": {
     "doc": "Ruby View",
     "title": "Html",
     "content": "You can write plain html in this file . &lt;h1&gt;Hello, there!&lt;/h1&gt; . ",
     "url": "/version/1.7/ruby/#html",
     
     "relUrl": "/ruby/#html"
-  },"102": {
+  },"103": {
     "doc": "Ruby View",
     "title": "Ruby",
     "content": "You can write plain Ruby in this file, as long as you use the brackets. &lt;% Ruby here %&gt; . Ruby can be used to edit the data, or write HTML code, like in this example: . &lt;% 5.times do %&gt; &lt;h1&gt;Hello, there!&lt;/h1&gt; &lt;% end %&gt; . ",
     "url": "/version/1.7/ruby/#ruby",
     
     "relUrl": "/ruby/#ruby"
-  },"103": {
+  },"104": {
     "doc": "Ruby View",
     "title": "CSS",
     "content": "You can style your data with css, or adjust margins . &lt;style&gt; .my-style { background-color: lightgray; font-size: larger; /* vscode editor will help suggest what to write here */ /* you can also use chatgpt to write css */ } &lt;/style&gt; . Note: It is technically possible use Javascript for advanced presentation. However - we encourage the use of Ruby whenever possible for human readability and code sharing. ",
     "url": "/version/1.7/ruby/#css",
     
     "relUrl": "/ruby/#css"
-  },"104": {
+  },"105": {
     "doc": "debug",
     "title": "Debug",
     "content": "Its possible to pause the code to analyze variables, and step through the code. ",
     "url": "/version/1.7/ruby/debug/#debug",
     
     "relUrl": "/ruby/debug/#debug"
-  },"105": {
+  },"106": {
     "doc": "debug",
     "title": "In your Ruby View",
     "content": "require \"byebug\" . Where a break in the code is needed, enter this . byebug . ",
     "url": "/version/1.7/ruby/debug/#in-your-ruby-view",
     
     "relUrl": "/ruby/debug/#in-your-ruby-view"
-  },"106": {
+  },"107": {
     "doc": "debug",
     "title": "Attach to the container",
     "content": "To see the debug window . $ docker attach sv-app . ",
     "url": "/version/1.7/ruby/debug/#attach-to-the-container",
     
     "relUrl": "/ruby/debug/#attach-to-the-container"
-  },"107": {
+  },"108": {
     "doc": "debug",
     "title": "Using byebug",
     "content": "Once the byebug line in your code is hit, the code will stop executing and you will enter the byebug terminal. In the image below you can see we run 3 commands: . | @show_fields to print the value of this variable | n or next to run the next line of code | @show_fields again to see that the value has changed | . You can also run any Ruby code you want, which can be useful to test that something works the way you expect it to: . Some useful commands in byebug: . | c or continue - Continue running the code until next time a byebug statement is hit | n or next - Run the next line of code | s or step - Steps inside a method that is on the next line to be ran, unlike next which will just run the whole method. | help - To get a list of all byebug commands | . ",
     "url": "/version/1.7/ruby/debug/#using-byebug",
     
     "relUrl": "/ruby/debug/#using-byebug"
-  },"108": {
+  },"109": {
     "doc": "debug",
     "title": "Quit the container",
     "content": "You need to press this key combination to exit the container, if not it will stop. press ctrl-p, ctrl-q . ",
     "url": "/version/1.7/ruby/debug/#quit-the-container",
     
     "relUrl": "/ruby/debug/#quit-the-container"
-  },"109": {
+  },"110": {
     "doc": "debug",
     "title": "If the container stops",
     "content": "If you exit the container by pressing ctrl-c instead of the recommended way, it will stop. In that case: . $ docker start sv-app . ",
     "url": "/version/1.7/ruby/debug/#if-the-container-stops",
     
     "relUrl": "/ruby/debug/#if-the-container-stops"
-  },"110": {
+  },"111": {
     "doc": "debug",
     "title": "debug",
     "content": " ",
     "url": "/version/1.7/ruby/debug/",
     
     "relUrl": "/ruby/debug/"
-  },"111": {
+  },"112": {
     "doc": "examples",
     "title": "Examples",
     "content": "These are som frequently used code snippets for the ruby view. ",
     "url": "/version/1.7/ruby/examples/#examples",
     
     "relUrl": "/ruby/examples/#examples"
-  },"112": {
+  },"113": {
     "doc": "examples",
     "title": "Table of Contents",
     "content": ". | Examples . | Display the main table | Add a new column for full name | Provide an alternative value | Use first part of the string | Convert utc to local time | Convert utc to formatted local time | Using only the date part | Custom method | Show blank page if no data | . | . ",
     "url": "/version/1.7/ruby/examples/#table-of-contents",
     
     "relUrl": "/ruby/examples/#table-of-contents"
-  },"113": {
+  },"114": {
     "doc": "examples",
     "title": "Display the main table",
     "content": "&lt;%= render 'table' %&gt; . | Will write the content of variable @docs that come from xml | . ",
     "url": "/version/1.7/ruby/examples/#display-the-main-table",
     
     "relUrl": "/ruby/examples/#display-the-main-table"
-  },"114": {
+  },"115": {
     "doc": "examples",
     "title": "Add a new column for full name",
     "content": "Make a new column that combines first name and last name . @docs.each do |doc| doc[\"full name\"] = doc[\"first name\"] + \" \" + doc[\"last name\"] end @show_fields &lt;&lt; \"full name\" . ",
     "url": "/version/1.7/ruby/examples/#add-a-new-column-for-full-name",
     
     "relUrl": "/ruby/examples/#add-a-new-column-for-full-name"
-  },"115": {
+  },"116": {
     "doc": "examples",
     "title": "Provide an alternative value",
     "content": "Show the student grade if it exists, or show a dashed line if its missing . @docs.each do |doc| doc[\"grade\"] ||= \"-----\" end . ",
     "url": "/version/1.7/ruby/examples/#provide-an-alternative-value",
     
     "relUrl": "/ruby/examples/#provide-an-alternative-value"
-  },"116": {
+  },"117": {
     "doc": "examples",
     "title": "Use first part of the string",
     "content": "E.g. remove time from the string 12.02.2024 11:00 . @docs.each do |doc| doc[\"date\"] = doc[\"date\"][0..9] end . ",
     "url": "/version/1.7/ruby/examples/#use-first-part-of-the-string",
     
     "relUrl": "/ruby/examples/#use-first-part-of-the-string"
-  },"117": {
+  },"118": {
     "doc": "examples",
     "title": "Convert utc to local time",
     "content": "@docs.each do |doc| doc[\"date\"] = doc[\"date\"].in_time_zone end . Note The date will be presented a little different. See next example for formatting. ",
     "url": "/version/1.7/ruby/examples/#convert-utc-to-local-time",
     
     "relUrl": "/ruby/examples/#convert-utc-to-local-time"
-  },"118": {
+  },"119": {
     "doc": "examples",
     "title": "Convert utc to formatted local time",
     "content": "If you want to format the result at the same time . @docs.each do |doc| doc[\"date\"] = doc[\"date\"].in_time_zone.strftime(\"%d.%m.%Y %H:%M\") end . ",
     "url": "/version/1.7/ruby/examples/#convert-utc-to-formatted-local-time",
     
     "relUrl": "/ruby/examples/#convert-utc-to-formatted-local-time"
-  },"119": {
+  },"120": {
     "doc": "examples",
     "title": "Using only the date part",
     "content": "Sometimes we only want the date and not the time part . @docs.each do |doc| doc[\"rental_days\"] = (doc[\"return_date\"].to_date - doc[\"rental_date\"].to_date).to_i end . Note If needed, use in_time_zone.to_date . ",
     "url": "/version/1.7/ruby/examples/#using-only-the-date-part",
     
     "relUrl": "/ruby/examples/#using-only-the-date-part"
-  },"120": {
+  },"121": {
     "doc": "examples",
     "title": "Custom method",
     "content": "Write out numbers e.g. 3 as “3 tre”, D as “Deltatt” Returns original string if not found . def write_out_grade(str) map = { \"1\" =&gt; \"1 en\", \"2\" =&gt; \"2 to\", \"3\" =&gt; \"3 tre\", \"4\" =&gt; \"4 fire\", \"5\" =&gt; \"5 fem\", \"6\" =&gt; \"6 seks\", \"D\" =&gt; \"Deltatt\", \"G\" =&gt; \"God\", \"NG\" =&gt; \"Nokså god\", \"LG\" =&gt; \"Lite god\", \"FU\" =&gt; \"Fullført utdanning\", \"IM\" =&gt; \"Ikke møtt\" } map[str] || str end . ",
     "url": "/version/1.7/ruby/examples/#custom-method",
     
     "relUrl": "/ruby/examples/#custom-method"
-  },"121": {
+  },"122": {
     "doc": "examples",
     "title": "Show blank page if no data",
     "content": "When no data, its good to exit early to avoid errors. return if @docs.empty? . ",
     "url": "/version/1.7/ruby/examples/#show-blank-page-if-no-data",
     
     "relUrl": "/ruby/examples/#show-blank-page-if-no-data"
-  },"122": {
+  },"123": {
     "doc": "examples",
     "title": "examples",
     "content": " ",
     "url": "/version/1.7/ruby/examples/",
     
     "relUrl": "/ruby/examples/"
-  },"123": {
+  },"124": {
     "doc": "logs",
     "title": "Logs",
     "content": "When making a Ruby View, it is sometimes good to have access to logs. $ docker logs -f sv-app . ",
     "url": "/version/1.7/ruby/logs/#logs",
     
     "relUrl": "/ruby/logs/#logs"
-  },"124": {
+  },"125": {
     "doc": "logs",
     "title": "logs",
     "content": " ",
     "url": "/version/1.7/ruby/logs/",
     
     "relUrl": "/ruby/logs/"
-  },"125": {
+  },"126": {
     "doc": "methods",
     "title": "Methods",
     "content": "These are the available methods for use in Ruby Views. ",
     "url": "/version/1.7/ruby/methods/#methods",
     
     "relUrl": "/ruby/methods/#methods"
-  },"126": {
+  },"127": {
     "doc": "methods",
     "title": "Table of Contents",
     "content": ". | Get data | Lookup data | Render table | Render header | Render footer | . ",
     "url": "/version/1.7/ruby/methods/#table-of-contents",
     
     "relUrl": "/ruby/methods/#table-of-contents"
-  },"127": {
+  },"128": {
     "doc": "methods",
     "title": "Get data",
     "content": "Example: Get active customers . customers = table(\"customers\", active:true, fields:\"name, email\") . Method . table(table, criteria, fields:, filter:, rows:) . | table table name | criteria Add criteria as needed e.g.: school:”fro”, class:”3a”, year:”2001” . | if conflict with built in parameters, wrap them in one pair of curly braces {} as parameter 2 | . | fields comma separated string of fields to retrive, e.g. fields:”first_name, last_name” | filter optional filter with solr syntax. same as tag “filter” | rows default is 20 rows. Increase to improve sorting, or download more files at once. Set ‘MAX_ROWS’ if needed, but check performance when using large values. | Returns empty array [] if no hits | . ",
     "url": "/version/1.7/ruby/methods/#get-data",
     
     "relUrl": "/ruby/methods/#get-data"
-  },"128": {
+  },"129": {
     "doc": "methods",
     "title": "Lookup data",
     "content": "Lookup data in another table. This is similar to using the tag “lookup” in xml . Example: Lookup address_id to find the city . lookup(main:customers, foreignkey:\"address_id\", table:\"address\", primarykey:\"id\", fields:\"city\") . table customers will be updated with the new data . Method . lookup(main:, foreignkey, primarykey:, fields:, table:) . | main existing variable that you want to extend with more data | foreignkey the foreign key in the main document | primarykey the primary key in the lookup table | table the lookup table that has more info | . ",
     "url": "/version/1.7/ruby/methods/#lookup-data",
     
     "relUrl": "/ruby/methods/#lookup-data"
-  },"129": {
+  },"130": {
     "doc": "methods",
     "title": "Render table",
     "content": "Render the default @docs variable to screen . &lt;%= render 'table' %&gt; . Render another table than @docs . If you want to render another table than @docs, you can send the data to the render ‘table’ method Or you could update the default @docs variable as needed. &lt;%= render 'table', docs: movies %&gt; . | docs optional data to be rendered | title optional table title | fields fields to show. By default the @show_fields variable will be used. | . Adding parameters to the table URL . Sometimes the next view may need extra data from the previous view. We can add those to the link by sending them into the render table method. Any parameter except of docs will be added to the url. | vi view index | ti table index | primarykey comma separated list of primarykeys | . NOTE If you reorder the xml, you must update the view and table index . E.g. here we send info about which view was the previous one, in “from_table”. The name of the variable is your choice. &lt;%= render 'table', vi:1, ti:2, primarykey:\"personid\", from_table:\"report\" %&gt; . The next view can check this param . &lt;% if params[\"from_table\"] == \"report\" %&gt; . ",
     "url": "/version/1.7/ruby/methods/#render-table",
     
     "relUrl": "/ruby/methods/#render-table"
-  },"130": {
+  },"131": {
     "doc": "methods",
     "title": "Render header",
     "content": "&lt;%= render 'header' %&gt; . @header_fields array of fields @docs the table, or optionally send parameter docs: my_docs @show_fields will be used to detect table size and formatting \\ . field values will be fetched from the first row in the table . ",
     "url": "/version/1.7/ruby/methods/#render-header",
     
     "relUrl": "/ruby/methods/#render-header"
-  },"131": {
+  },"132": {
     "doc": "methods",
     "title": "Render footer",
     "content": "&lt;%= render 'footer' %&gt; . @footer_fields array of fields @docs the table, or optionally send parameter docs: my_docs @show_fields will be used to detect table size and formatting \\ . field values will be fetched from the first row in the table . ",
     "url": "/version/1.7/ruby/methods/#render-footer",
     
     "relUrl": "/ruby/methods/#render-footer"
-  },"132": {
+  },"133": {
     "doc": "methods",
     "title": "methods",
     "content": " ",
     "url": "/version/1.7/ruby/methods/",
     
     "relUrl": "/ruby/methods/"
-  },"133": {
+  },"134": {
     "doc": "partials",
     "title": "Partials",
     "content": "A partial is a reusable piece of a view. It makes the code modular and easier to manage. ",
     "url": "/version/1.7/ruby/partials/#partials",
     
     "relUrl": "/ruby/partials/#partials"
-  },"134": {
+  },"135": {
     "doc": "partials",
     "title": "File name",
     "content": "File starts with _, e.g: _diploma_project.html.erb Render the view with name only render 'diploma_project' . ",
     "url": "/version/1.7/ruby/partials/#file-name",
     
     "relUrl": "/ruby/partials/#file-name"
-  },"135": {
+  },"136": {
     "doc": "partials",
     "title": "Example",
     "content": "_diploma_project.html.erb from the extens template: . &lt;h4&gt;Prosjektoppgave&lt;/h4&gt; &lt;table&gt; &lt;tr&gt;&lt;td&gt;Tema:&lt;/td&gt;&lt;td&gt;&lt;%= topic %&gt;&lt;/td&gt;&lt;/tr&gt; &lt;tr&gt;&lt;td&gt;Tittel:&lt;/td&gt;&lt;td&gt;&lt;%= title %&gt;&lt;/td&gt;&lt;/tr&gt; &lt;/table&gt; . Called from _diploma.html.erb: . &lt;%= render 'diploma_project', topic: oppgave_tema, title: oppgave_tittel %&gt; . ",
     "url": "/version/1.7/ruby/partials/#example",
     
     "relUrl": "/ruby/partials/#example"
-  },"136": {
+  },"137": {
     "doc": "partials",
     "title": "Reuse",
     "content": "Three sections on the diploma, but with less code: . &lt;%= render 'diploma_comment', table: merknader_person, field: \"merknad\", title: \"Merknad\" %&gt; &lt;%= render 'diploma_comment', table: merknader_fag, field: \"merknad\", title: \"Fagmerknad\" %&gt; &lt;%= render 'diploma_comment', table: vedlegg_person, field: \"merknad\", title: \"Vedlegg\" %&gt; . Tip Sending data into a partial is optional . ",
     "url": "/version/1.7/ruby/partials/#reuse",
     
     "relUrl": "/ruby/partials/#reuse"
-  },"137": {
+  },"138": {
     "doc": "partials",
     "title": "partials",
     "content": " ",
     "url": "/version/1.7/ruby/partials/",
     
     "relUrl": "/ruby/partials/"
-  },"138": {
+  },"139": {
     "doc": "print",
     "title": "Print",
     "content": "How to control the layout when the user prints the view, or sends it to PDF. ",
     "url": "/version/1.7/ruby/print/#print",
     
     "relUrl": "/ruby/print/#print"
-  },"139": {
+  },"140": {
     "doc": "print",
     "title": "Table of Contents",
     "content": ". | Print . | Add a print button | Hide on print / show only on print | Custom print layout | . | . ",
     "url": "/version/1.7/ruby/print/#table-of-contents",
     
     "relUrl": "/ruby/print/#table-of-contents"
-  },"140": {
+  },"141": {
     "doc": "print",
     "title": "Add a print button",
     "content": "The print button is added from xml. See export. &lt;table&gt; &lt;export&gt;print&lt;/export&gt; . ",
     "url": "/version/1.7/ruby/print/#add-a-print-button",
     
     "relUrl": "/ruby/print/#add-a-print-button"
-  },"141": {
+  },"142": {
     "doc": "print",
     "title": "Hide on print / show only on print",
     "content": "Use the built-in classes k-no-print and k-print-only to control what shows on screen vs paper. | k-no-print is visible on screen, hidden when printing | k-print-only is hidden on screen, visible only when printing | . &lt;div class=\"k-no-print\"&gt; &lt;p&gt;This is shown on screen, but not on print.&lt;/p&gt; &lt;/div&gt; &lt;h1 class=\"k-print-only\"&gt;Customer report&lt;/h1&gt; . ",
     "url": "/version/1.7/ruby/print/#hide-on-print--show-only-on-print",
     
     "relUrl": "/ruby/print/#hide-on-print--show-only-on-print"
-  },"142": {
+  },"143": {
     "doc": "print",
     "title": "Custom print layout",
     "content": "Combine the built-in classes with a @media print stylesheet for further adjustments. Here we enlarge the font and force a page break before each customer. &lt;style&gt; @media print { body { font-size: 14pt; } .customer { page-break-before: always; } } &lt;/style&gt; &lt;h1 class=\"k-print-only\"&gt;Customer report&lt;/h1&gt; &lt;div class=\"k-no-print\"&gt; &lt;p&gt;Click the print button to export this view as PDF.&lt;/p&gt; &lt;/div&gt; &lt;% @docs.each do |doc| %&gt; &lt;div class=\"customer\"&gt; &lt;h2&gt;&lt;%= doc[\"name\"] %&gt;&lt;/h2&gt; &lt;p&gt;&lt;%= doc[\"email\"] %&gt;&lt;/p&gt; &lt;/div&gt; &lt;% end %&gt; . | page-break-before: always starts a new page for each customer | font-size can be increased for better readability on paper | . Tip Increase &lt;rows&gt; in xml to get all records in one print or PDF. ",
     "url": "/version/1.7/ruby/print/#custom-print-layout",
     
     "relUrl": "/ruby/print/#custom-print-layout"
-  },"143": {
+  },"144": {
     "doc": "print",
     "title": "print",
     "content": " ",
     "url": "/version/1.7/ruby/print/",
     
     "relUrl": "/ruby/print/"
-  },"144": {
+  },"145": {
     "doc": "styling",
     "title": "Styling",
     "content": "How to make your templates look pretty . ",
     "url": "/version/1.7/ruby/styling/#styling",
     
     "relUrl": "/ruby/styling/#styling"
-  },"145": {
+  },"146": {
     "doc": "styling",
     "title": "Table of Contents",
     "content": ". | Styling . | CSS Styling with Bootstrap | Octicons | Charts | Markdown | . | . ",
     "url": "/version/1.7/ruby/styling/#table-of-contents",
     
     "relUrl": "/ruby/styling/#table-of-contents"
-  },"146": {
+  },"147": {
     "doc": "styling",
     "title": "CSS Styling with Bootstrap",
     "content": "Bootstrap makes modern css styling available in templates. Example: Formatting a table . &lt;table class=\"table\"&gt; . Example: Formatting a small table . &lt;table class=\"table table-sm\"&gt; . See Bootstrap docs for other examples . ",
     "url": "/version/1.7/ruby/styling/#css-styling-with-bootstrap",
     
     "relUrl": "/ruby/styling/#css-styling-with-bootstrap"
-  },"147": {
+  },"148": {
     "doc": "styling",
     "title": "Octicons",
     "content": "Octicons make icons available in templates. These are the same icons that Github uses. Example: Make an archive icon . &lt;%= octicon(\"archive\") %&gt; . Example: Make a larger icon . &lt;%= octicon(\"archive\", height:30) %&gt; . Example: Make the icon gray . &lt;%= octicon(\"archive\", fill:\"gray\") %&gt; . Note Bootstrap can also show icons, but so far we like the simplicity of Octicons. ",
     "url": "/version/1.7/ruby/styling/#octicons",
     
     "relUrl": "/ruby/styling/#octicons"
-  },"148": {
+  },"149": {
     "doc": "styling",
     "title": "Charts",
     "content": "With Chartkick you can use 1 line of Ruby to draw charts. ",
     "url": "/version/1.7/ruby/styling/#charts",
     
     "relUrl": "/ruby/styling/#charts"
-  },"149": {
+  },"150": {
     "doc": "styling",
     "title": "Markdown",
     "content": "You can write your archive description in Markdown # Heading 1 ## Heading 2 ### Heading 3 . The user will see a new info icon if the archive description is more than one line . Its is also possible to render markdown content in a Ruby View . &lt;%= markdown &lt;variable&gt; %&gt; . ",
     "url": "/version/1.7/ruby/styling/#markdown",
     
     "relUrl": "/ruby/styling/#markdown"
-  },"150": {
+  },"151": {
     "doc": "styling",
     "title": "styling",
     "content": " ",
     "url": "/version/1.7/ruby/styling/",
     
     "relUrl": "/ruby/styling/"
-  },"151": {
+  },"152": {
     "doc": "variables",
     "title": "Variables",
     "content": "These are the available variables . ",
     "url": "/version/1.7/ruby/variables/#variables",
     
     "relUrl": "/ruby/variables/#variables"
-  },"152": {
+  },"153": {
     "doc": "variables",
     "title": "@docs",
     "content": "Hash containing the data from XML . Display the main table . &lt;%= render 'table' %&gt; . Change all rows in a table . @docs.each do |doc| doc[\"first name\"] = doc[\"first name\"].titleize end . ",
     "url": "/version/1.7/ruby/variables/#docs",
     
     "relUrl": "/ruby/variables/#docs"
-  },"153": {
+  },"154": {
     "doc": "variables",
     "title": "@show_fields",
     "content": "Array of fields to present from the @docs variable . Add field . @show_fields += [\"first name\", \"last name\"] . Quick add field . @show_fields &lt;&lt; \"address\" . Remove field . @show_fields -= [\"first name\", \"last name\"] . Redefine order . Normally we define order in the fields tag when getting data, but we can also change order here . @show_fields = [\"first name\", \"last name\"] . ",
     "url": "/version/1.7/ruby/variables/#show_fields",
     
     "relUrl": "/ruby/variables/#show_fields"
-  },"154": {
+  },"155": {
     "doc": "variables",
     "title": "params",
     "content": "The primary key and search parameters from the parent will be put in the hash called params. Then the child view can use these values to fetch more data if needed, or do lookups. params[\"person_id\"] . ",
     "url": "/version/1.7/ruby/variables/#params",
     
     "relUrl": "/ruby/variables/#params"
-  },"155": {
+  },"156": {
     "doc": "variables",
     "title": "variables",
     "content": " ",
     "url": "/version/1.7/ruby/variables/",
     
     "relUrl": "/ruby/variables/"
-  },"156": {
+  },"157": {
     "doc": "Templates",
     "title": "Community Templates",
     "content": "Built by KDRS and members. Browse the collection below, or build your own. 25templates 11vendors Visma . BVPro . BVPro Flyt Barnevernvakt . Flyt Barnevernvakt ny Familia . Familia Marthe . Marthe Oskar . Oskar PPI . PPI Profil . Profil ny SamPro . SamPro ny Sikri . ephorte . ephorte Forum Winsak . Forum Winsak ny Kontor 2000 . Kontor 2000 IST . Extens . Extens Otto . Otto Sats skole . Sats skole DIPS . Acos Barnevern . Acos Barnevern ny Acos Sosial . Acos Sosial ny CosDoc . CosDoc ny Tieto . Gerica . Gerica Socio . Socio ny Waade Information System . WIS Skole . WIS Skole Vitec HK Data . HK Oppvekst . HK Oppvekst QmPlus . Qm+ . Qm+ Novari IKS . VIGO Voksen . VIGO Voksen Hove Medical Systems AS . System X . System X Barman Hanssen AS . iSkole . iSkole . KDRS can help configure a template as part of your membership. We also arrange courses to get you up to speed. Not a member? Contact us . ",
     "url": "/version/1.7/templates/#community-templates",
     
     "relUrl": "/templates/#community-templates"
-  },"157": {
+  },"158": {
     "doc": "Templates",
     "title": "Templates",
     "content": " ",
     "url": "/version/1.7/templates/",
     
     "relUrl": "/templates/"
-  },"158": {
+  },"159": {
     "doc": "XML View",
     "title": "XML View",
     "content": "KDRS Search &amp; View can be configured using XML. Features can be extended by using a Ruby View . XML displaying the example Sakila database. For an in-depth walkthrough of making this template and adding more features, see the guide. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;sakila movie database&lt;/description&gt; &lt;view&gt; &lt;name&gt;movies&lt;/name&gt; &lt;table&gt; &lt;name&gt;film&lt;/name&gt; &lt;title&gt;movies&lt;/title&gt; &lt;fields&gt;title,description,release_year&lt;/fields&gt; &lt;primarykey&gt;film_id&lt;/primarykey&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
     "url": "/version/1.7/xml/",
     
     "relUrl": "/xml/"
-  },"159": {
+  },"160": {
     "doc": "description",
     "title": "description",
     "content": "Descripe which system this template is used for . &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;views for sakila film database&lt;/description&gt; ... ",
     "url": "/version/1.7/xml/description/",
     
     "relUrl": "/xml/description/"
-  },"160": {
+  },"161": {
     "doc": "edit",
     "title": "Example",
     "content": "&lt;table&gt; ... &lt;edit&gt;[0..2]&lt;/edit&gt; &lt;!-- extracts country code +47 from +4790011111 --&gt; &lt;edit&gt;date.in_time_zone&lt;/edit&gt; &lt;!-- converts to local time zone --&gt; &lt;edit&gt;date.in_time_zone.strftime(\"%d.%m.%Y\")&lt;/edit&gt; &lt;!-- converts to local time zone, and returns string in norwegian date format --&gt; &lt;edit&gt;semester.sub(\"s1\",\"semester 1\")&lt;/edit&gt; &lt;!-- semester 1 instead of s1 --&gt; &lt;edit&gt;grade.sub(/^.{0}$/,\"---\")&lt;/edit&gt; &lt;!-- If no grade, draw a line --&gt; &lt;edit&gt;timer.sub(\".0\",\"\")&lt;/edit&gt; &lt;!-- e.g. 5 instead of 5.0 --&gt; &lt;edit&gt;location.capitalize&lt;/edit&gt; &lt;!-- Trondheim is a city in norway --&gt; &lt;edit&gt;location.titleize&lt;/edit&gt; &lt;!-- Trondheim Is A City In Norway --&gt; &lt;edit&gt;location.downcase&lt;/edit&gt; &lt;!-- trondheim is a city in norway --&gt; &lt;edit&gt;location.upcase&lt;/edit&gt; &lt;!-- TRONDHEIM IS A CITY IN NORWAY --&gt; . Note Searching on edited fields will currently search in the original data. ",
     "url": "/version/1.7/xml/edit/#example",
     
     "relUrl": "/xml/edit/#example"
-  },"161": {
+  },"162": {
     "doc": "edit",
     "title": "edit",
     "content": "Field values can be edited by using this tag. If the field is renamed, use the new name Any Ruby method can be used, as long as its on the format field.method or field[0..3]. Multiple methods can be chained, e.g. field.method1.method2 etc. A field can have multiple edit tags The edits will be done in the final table, after all the lookups (joins). Sorting will be done after the edits. ",
     "url": "/version/1.7/xml/edit/",
     
     "relUrl": "/xml/edit/"
-  },"162": {
+  },"163": {
     "doc": "export",
     "title": "export",
     "content": "Places a button in the view for easy printing or downloading multiple files in one Zip-archive. To add a print button: . &lt;table&gt; &lt;export&gt;print&lt;/export&gt; . To add selection boxes and a button for downloading multiple files as a Zip-file: . &lt;table&gt; &lt;export&gt;download&lt;/export&gt; &lt;filename&gt;doctitle&lt;/filename&gt; . Note When using the download export option, it is highly recommended to use the &lt;filename&gt; tag to give the files in the Zip-archive meaningful names. To do both: . &lt;table&gt; &lt;export&gt;download,print&lt;/export&gt; . ",
     "url": "/version/1.7/xml/export/",
     
     "relUrl": "/xml/export/"
-  },"163": {
+  },"164": {
     "doc": "fields",
     "title": "fields",
     "content": "Select which fields will be disiplayed from the table . &lt;table&gt; &lt;fields&gt;fname as first name, lname as last name, mobile&lt;/fields&gt; . fields can be renamed by using as . ",
     "url": "/version/1.7/xml/fields/",
     
     "relUrl": "/xml/fields/"
-  },"164": {
+  },"165": {
     "doc": "filename",
     "title": "filename",
     "content": "Choose a field that gives files their filename on download. &lt;table&gt; &lt;name&gt;folder&lt;/name&gt; &lt;fields&gt;docid,fileobject,doctitle&lt;/fields&gt; &lt;filename&gt;doctitle&lt;/filename&gt; &lt;export&gt;download&lt;/export&gt; . In the example above, files downloaded will get the filename of the content within the ‘doctitle’ field from the same row. This tag is especially useful when using &lt;export&gt;download&lt;/export&gt;, because if no &lt;filename&gt; is specified, every file in the Zip-archive will default to the name of the field. ",
     "url": "/version/1.7/xml/filename/",
     
     "relUrl": "/xml/filename/"
-  },"165": {
+  },"166": {
     "doc": "filter",
     "title": "Example: One criteria",
     "content": "&lt;filter&gt;name:\"school\"&lt;/filter&gt; . ",
     "url": "/version/1.7/xml/filter/#example-one-criteria",
     
     "relUrl": "/xml/filter/#example-one-criteria"
-  },"166": {
+  },"167": {
     "doc": "filter",
     "title": "Example: Criteria using OR",
     "content": "&lt;filter&gt;type:\"s\" OR type:\"e\"&lt;/filter&gt; . ",
     "url": "/version/1.7/xml/filter/#example-criteria-using-or",
     
     "relUrl": "/xml/filter/#example-criteria-using-or"
-  },"167": {
+  },"168": {
     "doc": "filter",
     "title": "Example: Criteria using AND",
     "content": "&lt;filter&gt;type:\"documentary\" AND release_year:\"2006\"&lt;/filter&gt; . ",
     "url": "/version/1.7/xml/filter/#example-criteria-using-and",
     
     "relUrl": "/xml/filter/#example-criteria-using-and"
-  },"168": {
+  },"169": {
     "doc": "filter",
     "title": "Example: Criteria using AND - multi tag",
     "content": "This is equivalent to using 1 tag with AND: . &lt;filter&gt;type:\"documentary\"&lt;/filter&gt; &lt;filter&gt;release_year:\"2006\"&lt;/filter&gt; . ",
     "url": "/version/1.7/xml/filter/#example-criteria-using-and---multi-tag",
     
     "relUrl": "/xml/filter/#example-criteria-using-and---multi-tag"
-  },"169": {
+  },"170": {
     "doc": "filter",
     "title": "Example: Find non value rows",
     "content": "Shorthand for finding rows that does not have any value for a field Note This is different from rows with an empty string. &lt;filter&gt;personid:nil&lt;/filter&gt; . We insert the proper solr syntax for this . Note Best practice is to use “ “ for the filter values, so that special characters does not alter the query. ",
     "url": "/version/1.7/xml/filter/#example-find-non-value-rows",
     
     "relUrl": "/xml/filter/#example-find-non-value-rows"
-  },"170": {
+  },"171": {
     "doc": "filter",
     "title": "filter",
     "content": "Data can be filtered. solr syntax can be used, but use human display names for the fields . Use AND or OR in uppercase to combine multiple criteria. Multiple filter tags are supported. They will be combined with AND. The tag belongs inside a table tag or a lookup tag . &lt;table&gt; &lt;filter&gt; . &lt;lookup&gt; &lt;filter&gt; . ",
     "url": "/version/1.7/xml/filter/",
     
     "relUrl": "/xml/filter/"
-  },"171": {
+  },"172": {
     "doc": "footer",
     "title": "footer",
     "content": "If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header or a footer. &lt;table&gt; &lt;fields&gt;diploma_id&lt;/fields&gt; &lt;footer&gt;diploma_id&lt;/footer&gt; . If you rename a field, use the renamed value for the footer . &lt;table&gt; &lt;fields&gt;diploma_id as nr&lt;/fields&gt; &lt;header&gt;nr&lt;/header&gt; . If the data is of primary nature, you can use a header instead. Make sure the data is really unique, because the column will be hidden. The first letter will be capitalized. ",
     "url": "/version/1.7/xml/footer/",
     
     "relUrl": "/xml/footer/"
-  },"172": {
+  },"173": {
     "doc": "foreignkey",
     "title": "foreignkey",
     "content": "If this is a child table, this key will match against the primary key of the parent table. This key is not needed for parent tables. &lt;table&gt; &lt;foreignkey&gt;fk_person&lt;/foreignkey&gt; . In child tables, you can use multiple foreign keys to match against multiple primary keys. ",
     "url": "/version/1.7/xml/foreignkey/",
     
     "relUrl": "/xml/foreignkey/"
-  },"173": {
+  },"174": {
     "doc": "header",
     "title": "header",
     "content": "If all rows in a column share the same value, e.g. first name, its recommended to place the value in a header above the table. &lt;table&gt; &lt;fields&gt;firstname&lt;/fields&gt; &lt;header&gt;firstname&lt;/header&gt; . If you rename a field, use the renamed value for header . &lt;table&gt; &lt;fields&gt;fname as firstname&lt;/fields&gt; &lt;header&gt;firstname&lt;/header&gt; . If the data is of second nature, you can use a footer instead. Make sure the data is really unique, because the column will be hidden. The first letter will be capitalized. ",
     "url": "/version/1.7/xml/header/",
     
     "relUrl": "/xml/header/"
-  },"174": {
+  },"175": {
     "doc": "lookup",
     "title": "lookup",
     "content": "Lookup an id in another table, and get one or more other values. Example: For each personid in table group, lookup this person in table people to find his/her firstname, lastname, phone and nationality_code. Do another lookup to expand the nationality_code into text. Repeat as many times as necessary to reach your goal. &lt;table&gt; &lt;name&gt;group&lt;/name&gt; &lt;fields&gt;personid&lt;/fields&gt; &lt;lookup&gt; &lt;foreignkey&gt;personid&lt;/foreignkey&gt; &lt;table&gt;people&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;firstname,lastname,phone,nationality_code&lt;/fields&gt; &lt;/lookup&gt; &lt;lookup&gt; &lt;foreignkey&gt;nationality_code&lt;/foreignkey&gt; &lt;table&gt;nationalities&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;nationality&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; . The resulting table will expand with new columns. If the lookup table have multiple lines for the same person, also the number of rows will increase. ",
     "url": "/version/1.7/xml/lookup/",
     
     "relUrl": "/xml/lookup/"
-  },"175": {
+  },"176": {
     "doc": "name",
     "title": "View name",
     "content": "Name of the view . ",
     "url": "/version/1.7/xml/name/#view-name",
     
     "relUrl": "/xml/name/#view-name"
-  },"176": {
+  },"177": {
     "doc": "name",
     "title": "Table name",
     "content": "This name must correspond to a name in the database. ",
     "url": "/version/1.7/xml/name/#table-name",
     
     "relUrl": "/xml/name/#table-name"
-  },"177": {
+  },"178": {
     "doc": "name",
     "title": "name",
     "content": "Can be used to name a view or a table. &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; &lt;name&gt;students&lt;/name&gt; . ",
     "url": "/version/1.7/xml/name/",
     
     "relUrl": "/xml/name/"
-  },"178": {
+  },"179": {
     "doc": "> Outline",
     "title": "> Outline",
     "content": "Index of every tag and its suggested order. Click a tag to learn more. For a more basic example see XML View . &lt;views&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;description&gt;example using all tags&lt;/description&gt; &lt;view&gt; &lt;name&gt;diploma&lt;/name&gt; &lt;schema&gt;db1&lt;/schema&gt; &lt;table&gt; &lt;name&gt;diploma&lt;/name&gt; &lt;title&gt;diploma&lt;/title&gt; &lt;parent&gt;person&lt;/parent&gt; &lt;fields&gt;fname as first_name,dob as birthdate,school,class,addressid,diploma_pdf&lt;/fields&gt; &lt;primarykey&gt;diplomaid&lt;/primarykey&gt; &lt;foreignkey&gt;personid&lt;/foreignkey&gt; &lt;filter&gt;first_name:\"arild\"&lt;/filter&gt; &lt;sort&gt;first_name&lt;/sort&gt; &lt;rubyview&gt;diploma&lt;/rubyview&gt; &lt;header&gt;school&lt;/header&gt; &lt;footer&gt;class&lt;/footer&gt; &lt;export&gt;print,download&lt;/export&gt; &lt;filename&gt;diploma_pdf&lt;/filename&gt; &lt;preview&gt;false&lt;/preview&gt; &lt;search&gt;false&lt;/search&gt; &lt;rows&gt;50&lt;/rows&gt; &lt;edit&gt;birthdate[0..9]&lt;/edit&gt; &lt;lookup&gt; &lt;foreignkey&gt;addressid&lt;/foreignkey&gt; &lt;table&gt;address&lt;/table&gt; &lt;primarykey&gt;id&lt;/primarykey&gt; &lt;fields&gt;street,city,country&lt;/fields&gt; &lt;/lookup&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
     "url": "/version/1.7/xml/outline/",
     
     "relUrl": "/xml/outline/"
-  },"179": {
+  },"180": {
     "doc": "parent",
     "title": "Showing parent tables side by side",
     "content": "Child tables that have the same parent will be listed side by side as tabs. Sometimes you may want to do this for multiple parent tables as well. You can use the parent tag with a dummy value like this: . &lt;table&gt; &lt;parent&gt;top&lt;/parent&gt; . ",
     "url": "/version/1.7/xml/parent/#showing-parent-tables-side-by-side",
     
     "relUrl": "/xml/parent/#showing-parent-tables-side-by-side"
-  },"180": {
+  },"181": {
     "doc": "parent",
     "title": "parent",
     "content": "The table name of a parent table. This will make this table a child table, and they will be linked. Parents primary key will match the childs foreign key. &lt;table&gt; &lt;parent&gt;person&lt;/parent&gt; . ",
     "url": "/version/1.7/xml/parent/",
     
     "relUrl": "/xml/parent/"
-  },"181": {
+  },"182": {
     "doc": "preview",
     "title": "preview",
     "content": "Shows a preview of the data. This is typically used if the number of choices are few, and the user does not need to search for the data. For sensitive data its recommended to disable the preview and require a spesific search. Example: . &lt;table&gt; &lt;preview&gt;false&lt;/preview&gt; . ",
     "url": "/version/1.7/xml/preview/",
     
     "relUrl": "/xml/preview/"
-  },"182": {
+  },"183": {
     "doc": "primarykey",
     "title": "primarykey",
     "content": "The primary key for this table . &lt;table&gt; &lt;primarykey&gt;person_id&lt;/primarykey&gt; . Sometimes there are multiple candidates. Choose the one that the child tables will refer to. You can also send multiple keys, if the next table needs more parameters. &lt;table&gt; &lt;primarykey&gt;person_id,type&lt;/primarykey&gt; . When selecting a table row, this value or values will be sent as a parameter to the next view. They will be matched against the foreign key in the child table. Se foreignkey for more info. ",
     "url": "/version/1.7/xml/primarykey/",
     
     "relUrl": "/xml/primarykey/"
-  },"183": {
+  },"184": {
     "doc": "rows",
     "title": "Sorting",
     "content": "Beware that sorting will sort this number of rows. One page at a time. If you need to sort across all pages, then increase this number to avoid paging entirely. ",
     "url": "/version/1.7/xml/rows/#sorting",
     
     "relUrl": "/xml/rows/#sorting"
-  },"184": {
+  },"185": {
     "doc": "rows",
     "title": "Performance",
     "content": "Check to see if the increased loading time for the view is acceptable. Tip Increase the number of rows to get them all in a pdf, or sent to printer. ",
     "url": "/version/1.7/xml/rows/#performance",
     
     "relUrl": "/xml/rows/#performance"
-  },"185": {
+  },"186": {
     "doc": "rows",
     "title": "rows",
     "content": "Default number of rows is 20. Use this tag to change the default for this view. &lt;table&gt; &lt;rows&gt;1000&lt;/rows&gt; . Use keyword max to get our suggested maximum. (Currently set to 10.000 rows) . &lt;table&gt; &lt;rows&gt;max&lt;/rows&gt; . ",
     "url": "/version/1.7/xml/rows/",
     
     "relUrl": "/xml/rows/"
-  },"186": {
+  },"187": {
     "doc": "rubyview",
     "title": "rubyview",
     "content": "You can make a Ruby View if you want advanced layout or features. This is a HTML file with some embedded Ruby. Make a file e.g. templates/school_app/_diploma.html.erb You can edit both the data and the presentation. See Ruby View for more info. &lt;table&gt; &lt;rubyview&gt;diploma&lt;/rubyview&gt; . Data from the xml file will be available in @docs . ",
     "url": "/version/1.7/xml/rubyview/",
     
     "relUrl": "/xml/rubyview/"
-  },"187": {
+  },"188": {
     "doc": "schema",
     "title": "Supporting different siard files",
     "content": "If we have two siard files from the same system, we can experience that one has a schema, and the other not. Then enter a schema name in the xml, and the system will fall back to the first schema if not found. In this way we can keep using the same view configuration. ",
     "url": "/version/1.7/xml/schema/#supporting-different-siard-files",
     
     "relUrl": "/xml/schema/#supporting-different-siard-files"
-  },"188": {
+  },"189": {
     "doc": "schema",
     "title": "schema",
     "content": "Some large databases are divided into parts called a schema. A table is uniquely referenced by using naming schema.table. To simplify table names, it is recommended to assign a default value for schema. This tag is not needed for simple databases with only one schema. &lt;view&gt; &lt;name&gt;karakterer&lt;/name&gt; &lt;schema&gt;ist&lt;/schema&gt; . ",
     "url": "/version/1.7/xml/schema/",
     
     "relUrl": "/xml/schema/"
-  },"189": {
+  },"190": {
     "doc": "search",
     "title": "search",
     "content": "A table will be searchable by default. If you want to turn this off, you can set this value to false. &lt;table&gt; &lt;search&gt;false&lt;/search&gt; . Tip Use this for reports, to get a more compact and printer friendly output. ",
     "url": "/version/1.7/xml/search/",
     
     "relUrl": "/xml/search/"
-  },"190": {
+  },"191": {
     "doc": "sort",
     "title": "sort",
     "content": "Sort the current page based on the given column. Use the &lt;rows&gt; tag to get more data for the current page. If the values seem to be integers, the sort will be numeric. If not they will sort as string. You can sort on one or more columns, either in ascending or descending order. Note If the field is renamed, use the new name. Example: . &lt;table&gt; &lt;sort&gt;lastname&lt;/sort&gt; &lt;!-- sorts in ascending order --&gt; &lt;sort&gt;lastname desc&lt;/sort&gt; &lt;!-- sorts in descending order --&gt; &lt;sort&gt;date desc, lastname&lt;/sort&gt; &lt;!-- sorts by date first in descending order, and then by last name when dates are equal --&gt; . ",
     "url": "/version/1.7/xml/sort/",
     
     "relUrl": "/xml/sort/"
-  },"191": {
+  },"192": {
     "doc": "table",
     "title": "table",
     "content": "Marks the beginning of a new table configuration. Other fields must preceed this field as shown. If multiple tables, placed them on the same level, beneath each other. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;views for extens&lt;/description&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; &lt;name&gt;students&lt;/name&gt; &lt;title&gt;students&lt;/title&gt; &lt;fields&gt;students&lt;/fields&gt; &lt;primarykey&gt;students&lt;/primarykey&gt; &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . Note The tags used above are the only required tags. ",
     "url": "/version/1.7/xml/table/",
     
     "relUrl": "/xml/table/"
-  },"192": {
+  },"193": {
     "doc": "title",
     "title": "title",
     "content": "Creates a title for the table . &lt;table&gt; &lt;name&gt;student&lt;/name&gt; &lt;title&gt;find student&lt;/title&gt; . The first letter will be capitalized. ",
     "url": "/version/1.7/xml/title/",
     
     "relUrl": "/xml/title/"
-  },"193": {
+  },"194": {
     "doc": "version",
     "title": "version",
     "content": "Version is the version of this configuration file. Convention is major.minor.patch Development starts with 0.1.0, then 0.2.0 if new feature, or 0.1.1 if bugfix. Increase major version to 1.0.0 when ready for production. &lt;views&gt; &lt;version&gt;0.1.0&lt;/version&gt; &lt;description&gt;for school system abc&lt;/description&gt; ... ",
     "url": "/version/1.7/xml/version/",
     
     "relUrl": "/xml/version/"
-  },"194": {
+  },"195": {
     "doc": "view",
     "title": "view",
     "content": "Marks the beginning av a new view. A view has a name and one or more tables. Example: . &lt;views&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; ... ",
     "url": "/version/1.7/xml/view/",
     
     "relUrl": "/xml/view/"
-  },"195": {
+  },"196": {
     "doc": "views",
     "title": "views",
     "content": "Group all the views. All configuration files start with &lt;views&gt; and ends with &lt;/views&gt; . Example: . &lt;views&gt; &lt;view&gt; &lt;name&gt;grades&lt;/name&gt; &lt;table&gt; ... &lt;/table&gt; &lt;/view&gt; &lt;/views&gt; . ",
