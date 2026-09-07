@@ -323,7 +323,7 @@
   },"46": {
     "doc": "1.7 Highlights ★",
     "title": "XML",
-    "content": ". | Duplicate tag detection | The row tag with value max fetches the maximum number of rows (currently 10.000) | . ",
+    "content": ". | Duplicate tag detection | The &lt;rows&gt;max&lt;/rows&gt; tag fetches the maximum number of rows (currently 10.000) | . ",
     "url": "/version/1.7/archive/1.7-highlights/#xml",
     
     "relUrl": "/archive/1.7-highlights/#xml"
