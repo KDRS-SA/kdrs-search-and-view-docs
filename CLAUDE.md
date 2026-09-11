@@ -11,6 +11,7 @@ Brief. Cut words that add nothing.
 - Bullets under a heading drop the repeated subject: "See all users", not "Archivers can see all users"
 - Don't describe what the screenshot already shows
 - Keep a "why" only when it tells the reader something (e.g. streaming helps large files)
+- Say what works, not what goes wrong if the reader does it wrong or what the app ignores
 
 ## Headings
 
