@@ -20,7 +20,7 @@ Tag naming rules:
 # Release from the Git server
 
 Open your template at [maler.kdrs.no](https://maler.kdrs.no/)  
-Sign in with your regular AD account.   
+Sign in with your regular KDRS account.   
 Go to `Releases` and click `New release`.
 
 ![]({{ site.baseurl }}/assets/images/guides/git/release/new-release.png)
