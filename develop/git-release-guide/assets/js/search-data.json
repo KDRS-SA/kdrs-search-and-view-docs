@@ -435,7 +435,7 @@
   },"62": {
     "doc": "Release a version",
     "title": "Release from the Git server",
-    "content": "Open your template at maler.kdrs.no Sign in with your regular AD account. Go to Releases and click New release. Write the new version number as the tag name, keep main as the target, and describe what you changed. Finish with Publish release. The version shows up in the sv template manager after Update all. Many main branches are protected by KDRS. Without author access to main, ask KDRS to merge your branch and release it for you. ",
+    "content": "Open your template at maler.kdrs.no Sign in with your regular KDRS account. Go to Releases and click New release. Write the new version number as the tag name, keep main as the target, and describe what you changed. Finish with Publish release. The version shows up in the sv template manager after Update all. Many main branches are protected by KDRS. Without author access to main, ask KDRS to merge your branch and release it for you. ",
     "url": "/develop/git-release-guide/guides/git/release/#release-from-the-git-server",
     
     "relUrl": "/guides/git/release/#release-from-the-git-server"
