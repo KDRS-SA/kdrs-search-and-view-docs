@@ -22,6 +22,10 @@ repoowner: KDRS-SA
 
 permalink: pretty
 
+# jekyll serve: refresh the browser on rebuild. polling is needed in VMs and containers
+livereload: true
+force_polling: true
+
 remote_theme: just-the-docs
 
 # defaults:

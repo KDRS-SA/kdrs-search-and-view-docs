@@ -13,6 +13,8 @@ jekyll serve --host 0.0.0.0
 ~~~
 *Option `--host 0.0.0.0` is required when running the local server in a VM with a separate network to listen for requests from the host computer.*
 
+The browser refreshes itself whenever the site rebuilds. This comes from `livereload` in `_config.yml`, and uses port 35729 alongside 4000.
+
 ## Template data
 
 `_data/templates.yml` is a copy of `vendor/available-templates/templates.yml` in SV.
