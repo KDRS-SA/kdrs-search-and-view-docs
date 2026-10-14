@@ -25,6 +25,9 @@ extens:
 familia:
   name: Familia
   vendor: Visma
+flyktning:
+  name: Flyktning
+  vendor: Visma
 forum-winsak:
   name: Forum Winsak
   vendor: Sikri (tidl. Evry/Ergo)
@@ -73,6 +76,9 @@ socio:
 systemx:
   name: System X
   vendor: Hove Medical Systems AS
+velferd:
+  name: Velferd
+  vendor: Visma
 vigo-voksen:
   name: VIGO Voksen
   vendor: Novari IKS
